@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "checks": [
+    "three_cached_indexes_reused",
+    "same_prediction_scope",
+    "identical_predictions_and_model_metrics",
+    "saved_human_decision_restored",
+    "test_decision_undone"
+  ],
+  "cached_startup_seconds": 2.4282897617667913
+}

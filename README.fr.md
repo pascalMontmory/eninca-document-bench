@@ -1,6 +1,6 @@
 # ENINCA Document Bench
 
-[English](README.md) · [Méthode](docs/fr/methodology.md) · [Résultats](docs/fr/results.md) · [Pilote](docs/fr/pilot.md)
+[English](README.md) · [Démonstration locale](docs/fr/demo.md) · [Méthode](docs/fr/methodology.md) · [Résultats](docs/fr/results.md) · [Pilote](docs/fr/pilot.md)
 
 Bibliothèque Python locale de recherche documentaire, de classement assisté et d'évaluation reproductible sur CPU. Développée par Pascal Montmory pour **ENINCA CONSULTING**.
 
@@ -18,6 +18,18 @@ L'objectif est de mesurer la qualité documentaire, la charge de revue humaine e
 - Mesures CPU par lots après préchauffage, embeddings contrôlés, CSV brut, empreintes du modèle/code/données et tests.
 
 **Aucun OCR, encodeur TPU/GPU natif ou gain de coût en production n'est démontré.** Le modèle actuel utilise ONNX Runtime sur CPU. Le corpus public contient des fiches pratiques, pas des scans ni des courriers d'entreprise réels. Pallas/TPU constitue une évaluation future distincte, pas un backend disponible.
+
+## Essayer la démonstration dans le navigateur
+
+Dans une copie de ce dépôt, lancer :
+
+```bash
+bash demo.sh
+```
+
+Le navigateur s’ouvre à **http://127.0.0.1:8765**. Recherchez parmi les 220 documents publics, vérifiez les propositions du modèle sur les 80 documents de test séparés, puis exportez vos décisions en CSV. L’interface est en français et en anglais ; les documents d’origine restent en français. Les index et les décisions restent dans `runs/browser-demo/`, sur votre ordinateur. Le premier lancement construit les index ; les suivants les réutilisent. Après l’installation des dépendances et du modèle, l’application fonctionne sans connexion. Les liens vers les sources publiques s’ouvrent à l’extérieur uniquement si vous cliquez dessus.
+
+Sur macOS, un double-clic sur `demo.command` permet également le lancement après installation. Gardez le Terminal ouvert ; arrêtez avec **Ctrl+C**. Ce lanceur ne relance pas la campagne de benchmark. Consulter le [scénario de démonstration de cinq minutes et le guide pratique](docs/fr/demo.md).
 
 ## Démarrer sur macOS ou Linux
 

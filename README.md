@@ -1,6 +1,6 @@
 # ENINCA Document Bench
 
-[Français](README.fr.md) · [Methods](docs/en/methodology.md) · [Results](docs/en/results.md) · [Pilot](docs/en/pilot.md)
+[Français](README.fr.md) · [Local browser demo](docs/en/demo.md) · [Methods](docs/en/methodology.md) · [Results](docs/en/results.md) · [Pilot](docs/en/pilot.md)
 
 A local Python library for document search, assisted classification and reproducible CPU evaluation. Developed by Pascal Montmory for **ENINCA CONSULTING**.
 
@@ -18,6 +18,18 @@ The practical objective is to establish document quality, human-review workload 
 - Warm CPU batching measurements, checked embeddings, raw CSV, model/source/data hashes and tests.
 
 **No OCR, native TPU/GPU encoder or production cost reduction is demonstrated.** The current model runs through ONNX Runtime on CPU. The public corpus contains guidance pages, not scans or real business correspondence. Pallas/TPU is a separate future evaluation, not an enabled backend.
+
+## Try the local browser demonstration
+
+In a checkout of this repository, run:
+
+```bash
+bash demo.sh
+```
+
+The browser opens at **http://127.0.0.1:8765**. Search the 220 public documents, review model suggestions on the 80 held-out test documents, and export human decisions to CSV. The interface supports French and English; original documents remain French. Indexes and decisions stay in `runs/browser-demo/` on your computer. The first launch builds indexes; subsequent launches reuse them. After initial dependency/model setup, the application needs no network connection. Public source links open externally only when clicked.
+
+On macOS, `demo.command` also launches it by double-clicking after setup. Keep the Terminal open; stop with **Ctrl+C**. This launcher does not rerun the benchmark campaign. See the [five-minute demonstration and operating guide](docs/en/demo.md).
 
 ## Start on macOS or Linux
 
