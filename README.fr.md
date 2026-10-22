@@ -71,6 +71,8 @@ La validation doit comprendre des exemples étiquetés de thèmes absents de l'a
 
 Consulter [les résultats mesurés et les échecs](docs/fr/results.md), [le protocole précis](docs/fr/methodology.md) et [le cadrage d'un petit pilote](docs/fr/pilot.md). Les essais historiques Mac ARM64 et VPS x86-64 sont conservés avec leur code figé. Les embeddings flottants sont contrôlés avec des tolérances numériques ; aucune identité bit à bit entre architectures n'est revendiquée.
 
+Le benchmark public de 220 documents est désormais archivé sur **Mac ARM64 et VPS x86-64**. Les 80 décisions de test concordent pour chacune des deux politiques, avec de faibles écarts de scores flottants. [La comparaison](docs/fr/results.md#qualité-et-provenance-entre-machines) présente les six configurations chronométrées, les fichiers originaux et les limites de la comparaison matérielle.
+
 L'encodeur est le modèle multilingue MiniLM existant, pas un nouveau modèle entraîné par ENINCA. La recherche cosinus exacte fonctionne en mémoire ; ce n'est pas une base vectorielle pour des millions de documents. Pour le classement, la moyenne des fenêtres chevauchantes peut diluer un thème local. Les scores cosinus et les marges ne sont pas des probabilités. Les exports d'index contiennent le texte intégral : les traiter comme confidentiels avec des documents privés.
 
 Le workflow CI est préparé pour contrôler les contrats unitaires, la séparation des données et la cohérence des preuves. Il est actuellement désactivé sur GitHub. Après réactivation, il permet aussi de lancer manuellement les tests optionnels avec le vrai modèle ; l'essai CPU local archivé les inclut. Aucun chiffre de performance issu de la CI n'est mis en avant.

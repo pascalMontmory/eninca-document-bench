@@ -37,6 +37,7 @@ python -m venv .venv
 ENINCA_DOCUMENT_MODEL=.models/minilm .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python benchmarks/run_public.py --model-dir .models/minilm --out runs/public-check
 .venv/bin/python scripts/check_records.py
+python benchmarks/compare_cpu_records.py
 ```
 
 `report.json` identifies sources and data; `calibration.json` records the selected policy and validation IDs; `quality.json` retains every prediction; `timings.csv` retains raw measurements. Source changes require a new named evidence run or an explicit historical source snapshot; never edit old measurements to appear current.

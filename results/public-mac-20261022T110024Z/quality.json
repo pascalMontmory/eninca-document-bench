@@ -1,0 +1,1332 @@
+{
+  "test": {
+    "fixed_defaults": {
+      "documents": 80,
+      "known_documents": 60,
+      "unknown_documents": 20,
+      "accepted": 57,
+      "correct_accepted": 38,
+      "incorrect_accepted": 19,
+      "coverage": 0.7125,
+      "known_coverage": 0.7333333333333333,
+      "accepted_precision": 0.6666666666666666,
+      "accepted_precision_wilson95": [
+        0.5372251158005144,
+        0.7750619392484925
+      ],
+      "known_accuracy_counting_abstentions_as_errors": 0.6333333333333333,
+      "unknown_false_accepts": 13,
+      "unknown_false_accept_rate": 0.65,
+      "unknown_false_accept_wilson95": [
+        0.43285427668523624,
+        0.818808175898918
+      ]
+    },
+    "validation_calibrated": {
+      "documents": 80,
+      "known_documents": 60,
+      "unknown_documents": 20,
+      "accepted": 33,
+      "correct_accepted": 27,
+      "incorrect_accepted": 6,
+      "coverage": 0.4125,
+      "known_coverage": 0.5,
+      "accepted_precision": 0.8181818181818182,
+      "accepted_precision_wilson95": [
+        0.6561176836533009,
+        0.9138923179105933
+      ],
+      "known_accuracy_counting_abstentions_as_errors": 0.45,
+      "unknown_false_accepts": 3,
+      "unknown_false_accept_rate": 0.15,
+      "unknown_false_accept_wilson95": [
+        0.052368745896216595,
+        0.36041886474075696
+      ]
+    }
+  },
+  "predictions": [
+    {
+      "document_id": "F1028",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7394675612449646,
+      "margin": 0.0631328821182251
+    },
+    {
+      "document_id": "F1068",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6350840330123901,
+      "margin": 0.10466796159744263
+    },
+    {
+      "document_id": "F10793",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7182765603065491,
+      "margin": 0.15292251110076904
+    },
+    {
+      "document_id": "F10827",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7566059231758118,
+      "margin": 0.01677417755126953
+    },
+    {
+      "document_id": "F11249",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6884931921958923,
+      "margin": 0.03313082456588745
+    },
+    {
+      "document_id": "F11601",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.48063501715660095,
+      "margin": 0.004085123538970947
+    },
+    {
+      "document_id": "F1239",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6586297154426575,
+      "margin": 0.1117551326751709
+    },
+    {
+      "document_id": "F1241",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6799757480621338,
+      "margin": 0.15823853015899658
+    },
+    {
+      "document_id": "F12484",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.8045167326927185,
+      "margin": 0.04589080810546875
+    },
+    {
+      "document_id": "F12567",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.5289549231529236,
+      "margin": 0.05436962842941284
+    },
+    {
+      "document_id": "F12743",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7883804440498352,
+      "margin": 0.09262722730636597
+    },
+    {
+      "document_id": "F1290",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.5997230410575867,
+      "margin": 0.06213730573654175
+    },
+    {
+      "document_id": "F13318",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.7710732817649841,
+      "margin": 0.014953672885894775
+    },
+    {
+      "document_id": "F13942",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7325484752655029,
+      "margin": 0.10382342338562012
+    },
+    {
+      "document_id": "F13943",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8193429112434387,
+      "margin": 0.1235848069190979
+    },
+    {
+      "document_id": "F15097",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.7695606350898743,
+      "margin": 0.10344034433364868
+    },
+    {
+      "document_id": "F1548",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6312144994735718,
+      "margin": 0.028122544288635254
+    },
+    {
+      "document_id": "F16536",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.5488932728767395,
+      "margin": 0.06588038802146912
+    },
+    {
+      "document_id": "F16542",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.706523597240448,
+      "margin": 0.10045379400253296
+    },
+    {
+      "document_id": "F16620",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7348769307136536,
+      "margin": 0.14253193140029907
+    },
+    {
+      "document_id": "F16622",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.673201858997345,
+      "margin": 0.11699730157852173
+    },
+    {
+      "document_id": "F16676",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8418766260147095,
+      "margin": 0.14841336011886597
+    },
+    {
+      "document_id": "F1754",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.7675972580909729,
+      "margin": 0.1577056646347046
+    },
+    {
+      "document_id": "F1757",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.701974630355835,
+      "margin": 0.09512823820114136
+    },
+    {
+      "document_id": "F17760",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.8189072012901306,
+      "margin": 0.16594946384429932
+    },
+    {
+      "document_id": "F1911",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7841160893440247,
+      "margin": 0.23524296283721924
+    },
+    {
+      "document_id": "F19211",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6977251768112183,
+      "margin": 0.18276441097259521
+    },
+    {
+      "document_id": "F1943",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.43813303112983704,
+      "margin": 0.005056947469711304
+    },
+    {
+      "document_id": "F1962",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.4820827543735504,
+      "margin": 0.0064279139041900635
+    },
+    {
+      "document_id": "F20014",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6706521511077881,
+      "margin": 0.027457118034362793
+    },
+    {
+      "document_id": "F2027",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.769293487071991,
+      "margin": 0.01899808645248413
+    },
+    {
+      "document_id": "F20520",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.794731855392456,
+      "margin": 0.04989069700241089
+    },
+    {
+      "document_id": "F2062",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.817829966545105,
+      "margin": 0.06691116094589233
+    },
+    {
+      "document_id": "F2127",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7244988679885864,
+      "margin": 0.08661472797393799
+    },
+    {
+      "document_id": "F21509",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.8083931803703308,
+      "margin": 0.08664721250534058
+    },
+    {
+      "document_id": "F2368",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6477014422416687,
+      "margin": 0.003155946731567383
+    },
+    {
+      "document_id": "F2474",
+      "suggested_label": "N19806",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.702480137348175,
+      "margin": 0.004680335521697998
+    },
+    {
+      "document_id": "F2594",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.8620320558547974,
+      "margin": 0.0774073600769043
+    },
+    {
+      "document_id": "F3079",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.8591960668563843,
+      "margin": 0.20157772302627563
+    },
+    {
+      "document_id": "F31421",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.612667977809906,
+      "margin": 0.07132357358932495
+    },
+    {
+      "document_id": "F31462",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6426164507865906,
+      "margin": 0.16410306096076965
+    },
+    {
+      "document_id": "F31512",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7658900022506714,
+      "margin": 0.16542887687683105
+    },
+    {
+      "document_id": "F31518",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7609024047851562,
+      "margin": 0.15469461679458618
+    },
+    {
+      "document_id": "F31527",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6724631190299988,
+      "margin": 0.11014050245285034
+    },
+    {
+      "document_id": "F31644",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.5436432957649231,
+      "margin": 0.04489096999168396
+    },
+    {
+      "document_id": "F31655",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7563073039054871,
+      "margin": 0.11718261241912842
+    },
+    {
+      "document_id": "F31685",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.814661979675293,
+      "margin": 0.14900654554367065
+    },
+    {
+      "document_id": "F31835",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7215146422386169,
+      "margin": 0.19227904081344604
+    },
+    {
+      "document_id": "F31881",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7521594762802124,
+      "margin": 0.060293614864349365
+    },
+    {
+      "document_id": "F31898",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8580238819122314,
+      "margin": 0.24627333879470825
+    },
+    {
+      "document_id": "F32294",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.313316285610199,
+      "margin": 0.0217551589012146
+    },
+    {
+      "document_id": "F32388",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6832204461097717,
+      "margin": 0.01207953691482544
+    },
+    {
+      "document_id": "F32428",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8216585516929626,
+      "margin": 0.2367534041404724
+    },
+    {
+      "document_id": "F32923",
+      "suggested_label": "N19806",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7477602362632751,
+      "margin": 0.10619723796844482
+    },
+    {
+      "document_id": "F33536",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6558800339698792,
+      "margin": 0.1519794464111328
+    },
+    {
+      "document_id": "F34064",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6560518741607666,
+      "margin": 0.02464902400970459
+    },
+    {
+      "document_id": "F34308",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.7827433347702026,
+      "margin": 0.1268633008003235
+    },
+    {
+      "document_id": "F34375",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.7621716856956482,
+      "margin": 0.15352016687393188
+    },
+    {
+      "document_id": "F34687",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.31918349862098694,
+      "margin": 0.03545841574668884
+    },
+    {
+      "document_id": "F34902",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7830230593681335,
+      "margin": 0.0970001220703125
+    },
+    {
+      "document_id": "F35266",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7838473916053772,
+      "margin": 0.09313774108886719
+    },
+    {
+      "document_id": "F35536",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7969352602958679,
+      "margin": 0.04777568578720093
+    },
+    {
+      "document_id": "F35584",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7820805311203003,
+      "margin": 0.06089639663696289
+    },
+    {
+      "document_id": "F35611",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.5868142247200012,
+      "margin": 0.185672789812088
+    },
+    {
+      "document_id": "F35779",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.8288692235946655,
+      "margin": 0.2052021026611328
+    },
+    {
+      "document_id": "F35937",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6700986623764038,
+      "margin": 0.023024141788482666
+    },
+    {
+      "document_id": "F36151",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6891491413116455,
+      "margin": 0.17044150829315186
+    },
+    {
+      "document_id": "F37827",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.8048598766326904,
+      "margin": 0.09233027696609497
+    },
+    {
+      "document_id": "F39760",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.612286388874054,
+      "margin": 0.05067628622055054
+    },
+    {
+      "document_id": "F466",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6095746159553528,
+      "margin": 0.004902303218841553
+    },
+    {
+      "document_id": "F476",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.582997739315033,
+      "margin": 0.06702947616577148
+    },
+    {
+      "document_id": "F562",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.5741898417472839,
+      "margin": 0.11920991539955139
+    },
+    {
+      "document_id": "F566",
+      "suggested_label": "N19806",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7195652723312378,
+      "margin": 0.14814329147338867
+    },
+    {
+      "document_id": "F637",
+      "suggested_label": "N19806",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7241030931472778,
+      "margin": 0.09195214509963989
+    },
+    {
+      "document_id": "F674",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.8492885828018188,
+      "margin": 0.1609184741973877
+    },
+    {
+      "document_id": "F737",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6918599605560303,
+      "margin": 0.1584409475326538
+    },
+    {
+      "document_id": "F742",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7023006677627563,
+      "margin": 0.014891266822814941
+    },
+    {
+      "document_id": "F752",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6597343683242798,
+      "margin": 0.0965956449508667
+    },
+    {
+      "document_id": "F789",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.72468501329422,
+      "margin": 0.058133482933044434
+    },
+    {
+      "document_id": "F862",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.7547038197517395,
+      "margin": 0.010513782501220703
+    }
+  ],
+  "fixed_default_predictions": [
+    {
+      "document_id": "F1028",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7394675612449646,
+      "margin": 0.0631328821182251
+    },
+    {
+      "document_id": "F1068",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.6350840330123901,
+      "margin": 0.10466796159744263
+    },
+    {
+      "document_id": "F10793",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7182765603065491,
+      "margin": 0.15292251110076904
+    },
+    {
+      "document_id": "F10827",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7566059231758118,
+      "margin": 0.01677417755126953
+    },
+    {
+      "document_id": "F11249",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6884931921958923,
+      "margin": 0.03313082456588745
+    },
+    {
+      "document_id": "F11601",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.48063501715660095,
+      "margin": 0.004085123538970947
+    },
+    {
+      "document_id": "F1239",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.6586297154426575,
+      "margin": 0.1117551326751709
+    },
+    {
+      "document_id": "F1241",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.6799757480621338,
+      "margin": 0.15823853015899658
+    },
+    {
+      "document_id": "F12484",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.8045167326927185,
+      "margin": 0.04589080810546875
+    },
+    {
+      "document_id": "F12567",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.5289549231529236,
+      "margin": 0.05436962842941284
+    },
+    {
+      "document_id": "F12743",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7883804440498352,
+      "margin": 0.09262722730636597
+    },
+    {
+      "document_id": "F1290",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.5997230410575867,
+      "margin": 0.06213730573654175
+    },
+    {
+      "document_id": "F13318",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7710732817649841,
+      "margin": 0.014953672885894775
+    },
+    {
+      "document_id": "F13942",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.7325484752655029,
+      "margin": 0.10382342338562012
+    },
+    {
+      "document_id": "F13943",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8193429112434387,
+      "margin": 0.1235848069190979
+    },
+    {
+      "document_id": "F15097",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.7695606350898743,
+      "margin": 0.10344034433364868
+    },
+    {
+      "document_id": "F1548",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6312144994735718,
+      "margin": 0.028122544288635254
+    },
+    {
+      "document_id": "F16536",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.5488932728767395,
+      "margin": 0.06588038802146912
+    },
+    {
+      "document_id": "F16542",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.706523597240448,
+      "margin": 0.10045379400253296
+    },
+    {
+      "document_id": "F16620",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.7348769307136536,
+      "margin": 0.14253193140029907
+    },
+    {
+      "document_id": "F16622",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.673201858997345,
+      "margin": 0.11699730157852173
+    },
+    {
+      "document_id": "F16676",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8418766260147095,
+      "margin": 0.14841336011886597
+    },
+    {
+      "document_id": "F1754",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.7675972580909729,
+      "margin": 0.1577056646347046
+    },
+    {
+      "document_id": "F1757",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.701974630355835,
+      "margin": 0.09512823820114136
+    },
+    {
+      "document_id": "F17760",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.8189072012901306,
+      "margin": 0.16594946384429932
+    },
+    {
+      "document_id": "F1911",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7841160893440247,
+      "margin": 0.23524296283721924
+    },
+    {
+      "document_id": "F19211",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.6977251768112183,
+      "margin": 0.18276441097259521
+    },
+    {
+      "document_id": "F1943",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.43813303112983704,
+      "margin": 0.005056947469711304
+    },
+    {
+      "document_id": "F1962",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.4820827543735504,
+      "margin": 0.0064279139041900635
+    },
+    {
+      "document_id": "F20014",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6706521511077881,
+      "margin": 0.027457118034362793
+    },
+    {
+      "document_id": "F2027",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.769293487071991,
+      "margin": 0.01899808645248413
+    },
+    {
+      "document_id": "F20520",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.794731855392456,
+      "margin": 0.04989069700241089
+    },
+    {
+      "document_id": "F2062",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.817829966545105,
+      "margin": 0.06691116094589233
+    },
+    {
+      "document_id": "F2127",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7244988679885864,
+      "margin": 0.08661472797393799
+    },
+    {
+      "document_id": "F21509",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.8083931803703308,
+      "margin": 0.08664721250534058
+    },
+    {
+      "document_id": "F2368",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6477014422416687,
+      "margin": 0.003155946731567383
+    },
+    {
+      "document_id": "F2474",
+      "suggested_label": "N19806",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.702480137348175,
+      "margin": 0.004680335521697998
+    },
+    {
+      "document_id": "F2594",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.8620320558547974,
+      "margin": 0.0774073600769043
+    },
+    {
+      "document_id": "F3079",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.8591960668563843,
+      "margin": 0.20157772302627563
+    },
+    {
+      "document_id": "F31421",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.612667977809906,
+      "margin": 0.07132357358932495
+    },
+    {
+      "document_id": "F31462",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.6426164507865906,
+      "margin": 0.16410306096076965
+    },
+    {
+      "document_id": "F31512",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7658900022506714,
+      "margin": 0.16542887687683105
+    },
+    {
+      "document_id": "F31518",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7609024047851562,
+      "margin": 0.15469461679458618
+    },
+    {
+      "document_id": "F31527",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.6724631190299988,
+      "margin": 0.11014050245285034
+    },
+    {
+      "document_id": "F31644",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.5436432957649231,
+      "margin": 0.04489096999168396
+    },
+    {
+      "document_id": "F31655",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7563073039054871,
+      "margin": 0.11718261241912842
+    },
+    {
+      "document_id": "F31685",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.814661979675293,
+      "margin": 0.14900654554367065
+    },
+    {
+      "document_id": "F31835",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7215146422386169,
+      "margin": 0.19227904081344604
+    },
+    {
+      "document_id": "F31881",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7521594762802124,
+      "margin": 0.060293614864349365
+    },
+    {
+      "document_id": "F31898",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8580238819122314,
+      "margin": 0.24627333879470825
+    },
+    {
+      "document_id": "F32294",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.313316285610199,
+      "margin": 0.0217551589012146
+    },
+    {
+      "document_id": "F32388",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6832204461097717,
+      "margin": 0.01207953691482544
+    },
+    {
+      "document_id": "F32428",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.8216585516929626,
+      "margin": 0.2367534041404724
+    },
+    {
+      "document_id": "F32923",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7477602362632751,
+      "margin": 0.10619723796844482
+    },
+    {
+      "document_id": "F33536",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.6558800339698792,
+      "margin": 0.1519794464111328
+    },
+    {
+      "document_id": "F34064",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6560518741607666,
+      "margin": 0.02464902400970459
+    },
+    {
+      "document_id": "F34308",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.7827433347702026,
+      "margin": 0.1268633008003235
+    },
+    {
+      "document_id": "F34375",
+      "suggested_label": "N19803",
+      "label": "N19803",
+      "needs_review": false,
+      "cosine_score": 0.7621716856956482,
+      "margin": 0.15352016687393188
+    },
+    {
+      "document_id": "F34687",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.31918349862098694,
+      "margin": 0.03545841574668884
+    },
+    {
+      "document_id": "F34902",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7830230593681335,
+      "margin": 0.0970001220703125
+    },
+    {
+      "document_id": "F35266",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7838473916053772,
+      "margin": 0.09313774108886719
+    },
+    {
+      "document_id": "F35536",
+      "suggested_label": "N19806",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7969352602958679,
+      "margin": 0.04777568578720093
+    },
+    {
+      "document_id": "F35584",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.7820805311203003,
+      "margin": 0.06089639663696289
+    },
+    {
+      "document_id": "F35611",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.5868142247200012,
+      "margin": 0.185672789812088
+    },
+    {
+      "document_id": "F35779",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.8288692235946655,
+      "margin": 0.2052021026611328
+    },
+    {
+      "document_id": "F35937",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6700986623764038,
+      "margin": 0.023024141788482666
+    },
+    {
+      "document_id": "F36151",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.6891491413116455,
+      "margin": 0.17044150829315186
+    },
+    {
+      "document_id": "F37827",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.8048598766326904,
+      "margin": 0.09233027696609497
+    },
+    {
+      "document_id": "F39760",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.612286388874054,
+      "margin": 0.05067628622055054
+    },
+    {
+      "document_id": "F466",
+      "suggested_label": "N19811",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.6095746159553528,
+      "margin": 0.004902303218841553
+    },
+    {
+      "document_id": "F476",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.582997739315033,
+      "margin": 0.06702947616577148
+    },
+    {
+      "document_id": "F562",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.5741898417472839,
+      "margin": 0.11920991539955139
+    },
+    {
+      "document_id": "F566",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7195652723312378,
+      "margin": 0.14814329147338867
+    },
+    {
+      "document_id": "F637",
+      "suggested_label": "N19806",
+      "label": "N19806",
+      "needs_review": false,
+      "cosine_score": 0.7241030931472778,
+      "margin": 0.09195214509963989
+    },
+    {
+      "document_id": "F674",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.8492885828018188,
+      "margin": 0.1609184741973877
+    },
+    {
+      "document_id": "F737",
+      "suggested_label": "N19811",
+      "label": "N19811",
+      "needs_review": false,
+      "cosine_score": 0.6918599605560303,
+      "margin": 0.1584409475326538
+    },
+    {
+      "document_id": "F742",
+      "suggested_label": "N19808",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7023006677627563,
+      "margin": 0.014891266822814941
+    },
+    {
+      "document_id": "F752",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.6597343683242798,
+      "margin": 0.0965956449508667
+    },
+    {
+      "document_id": "F789",
+      "suggested_label": "N19808",
+      "label": "N19808",
+      "needs_review": false,
+      "cosine_score": 0.72468501329422,
+      "margin": 0.058133482933044434
+    },
+    {
+      "document_id": "F862",
+      "suggested_label": "N19803",
+      "label": null,
+      "needs_review": true,
+      "cosine_score": 0.7547038197517395,
+      "margin": 0.010513782501220703
+    }
+  ]
+}

@@ -71,6 +71,8 @@ Validation must include labeled examples from topics absent from training. The d
 
 Read [the measured results and failures](docs/en/results.md), [the exact protocol](docs/en/methodology.md) and [a small pilot specification](docs/en/pilot.md). Historical Mac ARM64 and VPS x86-64 runs are retained with the frozen source that generated them. Floating embeddings are checked with numerical tolerances; no bit-for-bit cross-architecture claim is made.
 
+The 220-document public benchmark is now recorded on **both Mac ARM64 and VPS x86-64**. All 80 test decisions agree under each of the two policies, with small floating-score differences. [The comparison](docs/en/results.md#cross-machine-quality-and-provenance) includes the six timing configurations, original files and limits of the hardware comparison.
+
 The encoder is the existing multilingual MiniLM model, not a newly trained ENINCA model. Retrieval is in-memory exact cosine search; it is not a million-document vector database. Long documents are averaged over overlapping chunks for classification, which can dilute a local topic. Cosine scores and margins are not probabilities. Index exports contain full text; treat them as confidential when using private documents.
 
 The CI workflow is prepared to check unit contracts, split isolation and evidence consistency. It is currently disabled on GitHub. Once re-enabled, it also supports optional native model checks through manual workflow dispatch; the recorded local CPU run includes them. No CI performance numbers are advertised.

@@ -24,18 +24,28 @@ Preuves brutes : [`report.json`](../../results/public-cpu-20261022/report.json),
 
 ## Traitement CPU par lots sur le corpus public
 
-VPS AMD EPYC-Milan, Linux x86-64, deux threads d'inférence ONNX. L'échantillon chronométré contient **48 documents / 591 fenêtres**, répartis sur les longueurs de l'apprentissage et de la validation. Trois répétitions préchauffées par configuration ; initialisation et entrées-sorties fichiers exclues.
+VPS AMD EPYC-Milan (Linux x86-64) et Mac (Darwin ARM64), deux threads d'inférence ONNX sur chaque machine. Les deux essais utilisent le même code, modèle figé, corpus et échantillon chronométré de **48 documents / 591 fenêtres**, répartis sur les longueurs de l'apprentissage et de la validation. Trois répétitions préchauffées par configuration ; initialisation et entrées-sorties fichiers exclues. Le rapport Mac indique `cpu_model: arm`, sans désignation précise de la puce Apple.
 
-| Taille des lots de fenêtres | Ordre | Durée médiane d'appel | Documents/s | Fenêtres/s |
-|---|---|---:|---:|---:|
-| 4 | Entrée | 22,661 s | 2,118 | 26,080 |
-| 4 | Groupé par longueur | 21,554 s | 2,227 | 27,419 |
-| 8 | Entrée | 21,557 s | 2,227 | 27,415 |
-| 8 | Groupé par longueur | 20,672 s | 2,322 | 28,590 |
-| 16 | Entrée | 22,223 s | 2,160 | 26,594 |
-| 16 | Groupé par longueur | 20,461 s | 2,346 | 28,884 |
+| Taille des lots de fenêtres | Ordre | Médiane VPS | Médiane Mac | Documents/s VPS | Documents/s Mac |
+|---|---|---:|---:|---:|---:|
+| 4 | Entrée | 22,661 s | 20,007 s | 2,118 | 2,399 |
+| 4 | Groupé par longueur | 21,554 s | **18,958 s** | 2,227 | **2,532** |
+| 8 | Entrée | 21,557 s | 19,736 s | 2,227 | 2,432 |
+| 8 | Groupé par longueur | 20,672 s | 19,150 s | 2,322 | 2,507 |
+| 16 | Entrée | 22,223 s | 19,929 s | 2,160 | 2,409 |
+| 16 | Groupé par longueur | **20,461 s** | 19,372 s | **2,346** | 2,478 |
 
-Les 18 sorties chronométrées respectent l'ordre des fenêtres et la tolérance des embeddings. Le pic mémoire du processus est d'environ **1 188 Mio**, modèle, tableaux conservés et préchauffages inclus. C'est une comparaison exploratoire de configurations, sans campagne de confirmation séparée ni preuve d'économie en production. Les textes longs diminuent fortement les documents/s par rapport au petit jeu fictif ; fenêtres/s et longueurs doivent accompagner les annonces de débit.
+Les 18 sorties chronométrées de chaque machine respectent l'ordre des fenêtres et la tolérance des embeddings. Le pic mémoire du processus est d'environ **1 188 Mio sur le VPS** et **1 389 Mio sur le Mac**, modèle, tableaux conservés et préchauffages inclus ; ce sont des pics cumulés, pas des mesures isolées par configuration. Les textes longs diminuent fortement les documents/s par rapport au petit jeu fictif ; fenêtres/s et longueurs doivent accompagner les annonces de débit.
+
+Sur le Mac, grouper les fenêtres par longueur avec des lots de 4 réduit la durée médiane de **5,24 %** par rapport aux lots de 4 non triés. La meilleure configuration observée est le lot de 4 trié sur Mac (31,174 fenêtres/s), contre le lot de 16 trié sur VPS (28,884 fenêtres/s) : **7,93 % de débit supplémentaire** en comparant le meilleur résultat observé de chaque machine. À configuration identique de lots de 4 triés, le débit Mac observé est supérieur de 13,69 %. Ces comparaisons sont distinctes et n'isolent pas l'effet de l'architecture : Python 3.13.5 contre 3.11.2, NumPy 2.5.4 contre 2.4.6, OS/matériel/charge différents. ONNX Runtime 1.31.0 et Tokenizers 0.23.3 sont identiques. Il n'y a ni campagne indépendante de confirmation des performances ni preuve d'économie en production.
+
+## Qualité et provenance entre machines
+
+L'archive Mac a été importée sans modification de ses octets et vérifiée contre les **12 empreintes sources enregistrées**, l'identité du modèle, le manifeste du corpus et les trois empreintes de sortie. Sur les 80 documents du test séparé, **les 80 décisions coïncident pour chacune des deux politiques**, y compris suggestions et abstentions. Les seuils de calibration et les indicateurs agrégés coïncident aussi. Cela confirme les mêmes décisions sur cet échantillon figé ; l'objectif de précision de 90 % sur validation reste non atteint au test (27/33 = 81,8 %).
+
+Les scores cosinus diffèrent au maximum de **7,15 × 10⁻⁷** et les marges de **1,07 × 10⁻⁶**. Les résultats flottants ne sont donc pas identiques bit à bit. Les tableaux d'embeddings bruts n'ont pas été archivés : leur égalité entre machines n'est pas établie. L'archive importée contient quatre fichiers JSON/CSV, pas le journal terminal des tests.
+
+Preuves Mac : [`report.json`](../../results/public-mac-20261022T110024Z/report.json), [`calibration.json`](../../results/public-mac-20261022T110024Z/calibration.json), [`quality.json`](../../results/public-mac-20261022T110024Z/quality.json), [`timings.csv`](../../results/public-mac-20261022T110024Z/timings.csv), [reçu d'import et empreinte d'archive](../../results/public-mac-20261022T110024Z/import.json). La [comparaison structurée](../../results/mac-vps-public-comparison-20261022.json) est recalculable hors ligne avec `python benchmarks/compare_cpu_records.py` ; elle compare les preuves archivées sans nouvelle inférence.
 
 ## Première petite démonstration fictive
 

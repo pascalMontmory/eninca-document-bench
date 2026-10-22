@@ -1,0 +1,16 @@
+{
+  "imported_utc": "2026-10-22T11:12:33.764521+00:00",
+  "archive_filename": "eninca-documents-mac-20261022T110024Z.tar.gz",
+  "archive_sha256": "2faa6fb2c148cd4e422a7ca53ffbc8bd424a2ce2a723f36089958e340f91cf3e",
+  "archive_member_prefix": "runs/20261022T110024Z-public-cpu/",
+  "files_sha256": {
+    "calibration.json": "1ef6f758754059d38268d630ca1f5808d91e487894db8758a486389f87c80bf5",
+    "quality.json": "a12b05ec9ce7531ab05dbcccf3c76ae74be6bd57f1f961a104b675e54b19a877",
+    "report.json": "47a5298b7ff6c0ddf7f8f95bf03bfd81d3fab926b232c925c309bf1607076e1a",
+    "timings.csv": "553c32ea70808c7e649356e3a06736718496d345779ee0a1230692b84188c4bc"
+  },
+  "repository_commit_before_import": "d5eb4df9e2a2b8755f3b00d61e8273a460f6995e",
+  "scope": "Original JSON/CSV bytes preserved; source and data hashes verified. No new inference or performance measurements.",
+  "terminal_log_included": false,
+  "raw_embedding_arrays_included": false
+}
