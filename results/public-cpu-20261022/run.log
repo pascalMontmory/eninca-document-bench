@@ -1,0 +1,92 @@
+Corpus: {'documents': 220, 'families': 107, 'source_and_split_checks': 'pass'}
+Encoding train: 60 documents
+Encoding validation: 80 documents
+Calibration frozen: thresholds, score=0.7499999999999999, margin=0.01
+Held-out quality: {"fixed_defaults": {"documents": 80, "known_documents": 60, "unknown_documents": 20, "accepted": 57, "correct_accepted": 38, "incorrect_accepted": 19, "coverage": 0.7125, "known_coverage": 0.7333333333333333, "accepted_precision": 0.6666666666666666, "accepted_precision_wilson95": [0.5372251158005144, 0.7750619392484925], "known_accuracy_counting_abstentions_as_errors": 0.6333333333333333, "unknown_false_accepts": 13, "unknown_false_accept_rate": 0.65, "unknown_false_accept_wilson95": [0.43285427668523624, 0.818808175898918]}, "validation_calibrated": {"documents": 80, "known_documents": 60, "unknown_documents": 20, "accepted": 33, "correct_accepted": 27, "incorrect_accepted": 6, "coverage": 0.4125, "known_coverage": 0.5, "accepted_precision": 0.8181818181818182, "accepted_precision_wilson95": [0.6561176836533009, 0.9138923179105933], "known_accuracy_counting_abstentions_as_errors": 0.45, "unknown_false_accepts": 3, "unknown_false_accept_rate": 0.15, "unknown_false_accept_wilson95": [0.052368745896216595, 0.36041886474075696]}}
+Warmup: batch=4, length_sorted=False
+Warmup: batch=4, length_sorted=True
+Warmup: batch=8, length_sorted=False
+Warmup: batch=8, length_sorted=True
+Warmup: batch=16, length_sorted=False
+Warmup: batch=16, length_sorted=True
+Measurement 1/3: batch=16, sorted=False, 22.223s; outputs PASS
+Measurement 1/3: batch=16, sorted=True, 20.461s; outputs PASS
+Measurement 1/3: batch=4, sorted=True, 21.856s; outputs PASS
+Measurement 1/3: batch=4, sorted=False, 22.661s; outputs PASS
+Measurement 1/3: batch=8, sorted=False, 21.557s; outputs PASS
+Measurement 1/3: batch=8, sorted=True, 20.672s; outputs PASS
+Measurement 2/3: batch=4, sorted=True, 21.554s; outputs PASS
+Measurement 2/3: batch=8, sorted=True, 19.924s; outputs PASS
+Measurement 2/3: batch=16, sorted=True, 20.029s; outputs PASS
+Measurement 2/3: batch=8, sorted=False, 20.952s; outputs PASS
+Measurement 2/3: batch=4, sorted=False, 21.970s; outputs PASS
+Measurement 2/3: batch=16, sorted=False, 21.446s; outputs PASS
+Measurement 3/3: batch=16, sorted=False, 22.241s; outputs PASS
+Measurement 3/3: batch=16, sorted=True, 21.263s; outputs PASS
+Measurement 3/3: batch=8, sorted=False, 22.236s; outputs PASS
+Measurement 3/3: batch=4, sorted=False, 22.810s; outputs PASS
+Measurement 3/3: batch=8, sorted=True, 21.236s; outputs PASS
+Measurement 3/3: batch=4, sorted=True, 21.326s; outputs PASS
+[
+  {
+    "batch_size": 4,
+    "sort_by_length": false,
+    "median_seconds": 22.66112721711397,
+    "min_seconds": 21.969594974070787,
+    "max_seconds": 22.81030780635774,
+    "documents_per_second": 2.1181647117602247,
+    "chunks_per_second": 26.079903013547767,
+    "padding_fraction": 0.030271785109983074
+  },
+  {
+    "batch_size": 4,
+    "sort_by_length": true,
+    "median_seconds": 21.55402515269816,
+    "min_seconds": 21.325996927917004,
+    "max_seconds": 21.8564270157367,
+    "documents_per_second": 2.226962233733466,
+    "chunks_per_second": 27.4194725028433,
+    "padding_fraction": 0.0021491920126230912
+  },
+  {
+    "batch_size": 8,
+    "sort_by_length": false,
+    "median_seconds": 21.557170731946826,
+    "min_seconds": 20.95163346081972,
+    "max_seconds": 22.23575204052031,
+    "documents_per_second": 2.2266372798572314,
+    "chunks_per_second": 27.41547150824216,
+    "padding_fraction": 0.030271785109983074
+  },
+  {
+    "batch_size": 8,
+    "sort_by_length": true,
+    "median_seconds": 20.671875352039933,
+    "min_seconds": 19.923878774046898,
+    "max_seconds": 21.236206337809563,
+    "documents_per_second": 2.3219954253092614,
+    "chunks_per_second": 28.58956867412028,
+    "padding_fraction": 0.00501844618055558
+  },
+  {
+    "batch_size": 16,
+    "sort_by_length": false,
+    "median_seconds": 22.222792802378535,
+    "min_seconds": 21.44557153992355,
+    "max_seconds": 22.240742905065417,
+    "documents_per_second": 2.1599445410327767,
+    "chunks_per_second": 26.594317161466062,
+    "padding_fraction": 0.030271785109983074
+  },
+  {
+    "batch_size": 16,
+    "sort_by_length": true,
+    "median_seconds": 20.460921688005328,
+    "min_seconds": 20.028656037524343,
+    "max_seconds": 21.26349593140185,
+    "documents_per_second": 2.345935375342291,
+    "chunks_per_second": 28.884329308901957,
+    "padding_fraction": 0.009532296392309347
+  }
+]
+PASS: report saved to runs/public-cpu-20261022/report.json

@@ -1,0 +1,8 @@
+{"id":"train-f1","label":"facture","text":"Facture fournisseur : fourniture de papier et de cartouches. Total hors taxes 240 euros, TVA 48 euros. Montant à régler 288 euros avant le 30 novembre."}
+{"id":"train-f2","label":"facture","text":"Facture de prestation informatique, numéro F-2026-017. Maintenance mensuelle du parc. Le règlement par virement est attendu sous trente jours."}
+{"id":"train-r1","label":"ressources_humaines","text":"Contrat de travail à durée indéterminée. La salariée est recrutée comme gestionnaire, à temps complet. La rémunération et la période d'essai sont définies ci-dessous."}
+{"id":"train-r2","label":"ressources_humaines","text":"Demande de congés annuels : le salarié souhaite s'absenter du 12 au 16 août. La responsable du service doit valider ces jours dans le planning."}
+{"id":"train-a1","label":"assurance","text":"Contrat d'assurance multirisque professionnelle. Garanties incendie, dégât des eaux et vol. La prime annuelle est de 630 euros avec une franchise par sinistre."}
+{"id":"train-a2","label":"assurance","text":"Déclaration de sinistre auprès de l'assureur. Une fuite a endommagé les bureaux. Merci de désigner un expert et d'ouvrir le dossier d'indemnisation."}
+{"id":"train-l1","label":"livraison","text":"Bon de livraison : douze cartons de matériel ont été remis au destinataire à l'entrepôt. Signature du réceptionnaire et réserves sur l'état des colis."}
+{"id":"train-l2","label":"livraison","text":"Avis du transporteur : votre commande sera acheminée demain. Le chauffeur présentera les palettes au quai de réception entre huit et dix heures."}

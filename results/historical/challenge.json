@@ -1,0 +1,368 @@
+{
+  "environment": {
+    "created_utc": "2026-10-22T10:11:58.945762+00:00",
+    "platform": "Linux",
+    "machine": "x86_64",
+    "cpu_model": "AMD EPYC-Milan Processor",
+    "logical_cpus": 16,
+    "python": "3.11.2",
+    "packages": {
+      "numpy": "2.4.6",
+      "onnxruntime": "1.31.0",
+      "tokenizers": "0.23.3"
+    },
+    "source_sha256": {
+      "__init__.py": "ea1965b6ea92a3e30d1b55a0c136da8f5e285fae635aca20ecc65405cc73199a",
+      "cli.py": "2248d27eed9621b825b08a48178720b596d28b047677cd6d7da54f20d78874d2",
+      "core.py": "54f0d15d7ac49c3a8cf2e84c02f54c5b80fcd95e6e098d487f20848a92654527",
+      "encoder.py": "3e73b6bde54fed4af4b0cb089a38595c7e6a1f3296be88b0799a8800fa7d1da8",
+      "model.lock.json": "e7badb3e4a852b6204314f82cce8bf3bae732170d64235aa1aa54296c0412d30",
+      "model.py": "a795bed081c3fdb936ad725022bc15669f53e8941d748a309b055679e7c429ad"
+    }
+  },
+  "encoder": {
+    "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "ae06c001a2546bef168b9bf8f570ccb1a16aaa27",
+    "onnx_sha256": "10f7a088420252b26caf819236ca2c9d2987afd0fc06fec7553b542a5655a05a",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "max_tokens": 128,
+    "stride": 16,
+    "pooling": "attention-mask-mean-then-l2",
+    "dimension": 384
+  },
+  "challenge_sha256": "7b810d137fc09917e5bdcbb570668376c6aa091811e16ca0d12b7a826f800d8f",
+  "runner_sha256": "f2eabea63c7377285541d23173a7486d5f194955b7ee79fa7984b188f6282690",
+  "thresholds": {
+    "min_score": 0.4,
+    "min_margin": 0.05
+  },
+  "scope": "New authored French examples, fixed before inference; functional checks, not a client benchmark",
+  "summary": {
+    "new_query_top1_correct": 3,
+    "new_queries": 4,
+    "known_class_correct": 7,
+    "known_class_documents": 8,
+    "unknown_correctly_sent_for_review": 1,
+    "unknown_documents": 2
+  },
+  "queries": [
+    {
+      "id": "new-q1",
+      "text": "Je veux travailler deux jours chez moi : où sont les règles ?",
+      "expected_id": "teletravail",
+      "hits": [
+        {
+          "document_id": "teletravail",
+          "score": 0.67003333568573,
+          "chunk": {
+            "document_id": "teletravail",
+            "ordinal": 0,
+            "start": 0,
+            "end": 207,
+            "tokens": 46
+          },
+          "excerpt": "Charte de télétravail. Deux journées par semaine peuvent être effectuées à domicile après accord du manager. Le collaborateur doit rester joignable aux horaires habituels et utiliser une connexion sécurisée."
+        },
+        {
+          "document_id": "procedure-conges",
+          "score": 0.5138797760009766,
+          "chunk": {
+            "document_id": "procedure-conges",
+            "ordinal": 0,
+            "start": 0,
+            "end": 172,
+            "tokens": 37
+          },
+          "excerpt": "Pour prendre des vacances, chaque salarié dépose une demande dans le portail RH au moins quinze jours avant son départ. Le responsable du service valide les congés annuels."
+        },
+        {
+          "document_id": "contrat-maintenance",
+          "score": 0.2630246877670288,
+          "chunk": {
+            "document_id": "contrat-maintenance",
+            "ordinal": 0,
+            "start": 0,
+            "end": 208,
+            "tokens": 50
+          },
+          "excerpt": "Le prestataire assure la maintenance des scanners pendant douze mois. Toute panne doit être signalée au support. Le contrat peut être résilié avec un préavis écrit de trente jours avant son échéance annuelle."
+        }
+      ],
+      "top1_correct": true
+    },
+    {
+      "id": "new-q2",
+      "text": "Qui est autorisé à consulter les informations des salariés ?",
+      "expected_id": "confidentialite",
+      "hits": [
+        {
+          "document_id": "confidentialite",
+          "score": 0.5754494667053223,
+          "chunk": {
+            "document_id": "confidentialite",
+            "ordinal": 0,
+            "start": 0,
+            "end": 186,
+            "tokens": 38
+          },
+          "excerpt": "Politique de confidentialité. Les dossiers du personnel contiennent des informations privées. Seuls les agents autorisés du service des ressources humaines peuvent consulter ces données."
+        },
+        {
+          "document_id": "procedure-conges",
+          "score": 0.4943610429763794,
+          "chunk": {
+            "document_id": "procedure-conges",
+            "ordinal": 0,
+            "start": 0,
+            "end": 172,
+            "tokens": 37
+          },
+          "excerpt": "Pour prendre des vacances, chaque salarié dépose une demande dans le portail RH au moins quinze jours avant son départ. Le responsable du service valide les congés annuels."
+        },
+        {
+          "document_id": "formation",
+          "score": 0.4432586431503296,
+          "chunk": {
+            "document_id": "formation",
+            "ordinal": 0,
+            "start": 0,
+            "end": 196,
+            "tokens": 42
+          },
+          "excerpt": "Le plan de formation prévoit une session sur la cybersécurité. Les salariés apprendront à reconnaître un courriel frauduleux, à protéger leurs mots de passe et à signaler un incident informatique."
+        }
+      ],
+      "top1_correct": true
+    },
+    {
+      "id": "new-q3",
+      "text": "On a mal classé mes fichiers scannés, à qui le signaler ?",
+      "expected_id": "reclamation-client",
+      "hits": [
+        {
+          "document_id": "incident-eau",
+          "score": 0.49903130531311035,
+          "chunk": {
+            "document_id": "incident-eau",
+            "ordinal": 0,
+            "start": 0,
+            "end": 194,
+            "tokens": 50
+          },
+          "excerpt": "Dossier de déclaration de sinistre. Une canalisation a éclaté dans les archives. Les photographies des dommages et les factures de remise en état sont transmises à l'assureur pour indemnisation."
+        },
+        {
+          "document_id": "reclamation-client",
+          "score": 0.4778311550617218,
+          "chunk": {
+            "document_id": "reclamation-client",
+            "ordinal": 0,
+            "start": 0,
+            "end": 200,
+            "tokens": 53
+          },
+          "excerpt": "Un client signale une erreur dans le classement de ses dossiers numérisés. Le support vérifie les références et ouvre un ticket de correction. Une réponse doit lui être envoyée sous deux jours ouvrés."
+        },
+        {
+          "document_id": "inventaire",
+          "score": 0.4169941246509552,
+          "chunk": {
+            "document_id": "inventaire",
+            "ordinal": 0,
+            "start": 0,
+            "end": 209,
+            "tokens": 55
+          },
+          "excerpt": "Inventaire du dépôt : le contrôle porte sur les boîtes, les cotes et les emplacements de rayonnage. Les écarts sont consignés avant toute mise à jour du catalogue. Un second opérateur confirme les corrections."
+        }
+      ],
+      "top1_correct": false
+    },
+    {
+      "id": "new-q4",
+      "text": "Comment vérifier l'emplacement des boîtes dans les rayonnages ?",
+      "expected_id": "inventaire",
+      "hits": [
+        {
+          "document_id": "inventaire",
+          "score": 0.5861097574234009,
+          "chunk": {
+            "document_id": "inventaire",
+            "ordinal": 0,
+            "start": 0,
+            "end": 209,
+            "tokens": 55
+          },
+          "excerpt": "Inventaire du dépôt : le contrôle porte sur les boîtes, les cotes et les emplacements de rayonnage. Les écarts sont consignés avant toute mise à jour du catalogue. Un second opérateur confirme les corrections."
+        },
+        {
+          "document_id": "reception-colis",
+          "score": 0.5817016363143921,
+          "chunk": {
+            "document_id": "reception-colis",
+            "ordinal": 0,
+            "start": 0,
+            "end": 182,
+            "tokens": 49
+          },
+          "excerpt": "Procédure de réception des colis. Vérifier le nombre de cartons et leur état avant de signer le bon du transporteur. En cas de casse, inscrire des réserves précises sur le bordereau."
+        },
+        {
+          "document_id": "reclamation-client",
+          "score": 0.2570731043815613,
+          "chunk": {
+            "document_id": "reclamation-client",
+            "ordinal": 0,
+            "start": 0,
+            "end": 200,
+            "tokens": 53
+          },
+          "excerpt": "Un client signale une erreur dans le classement de ses dossiers numérisés. Le support vérifie les références et ouvre un ticket de correction. Une réponse doit lui être envoyée sous deux jours ouvrés."
+        }
+      ],
+      "top1_correct": true
+    }
+  ],
+  "classification": [
+    {
+      "id": "new-f1",
+      "text": "Électricité des locaux : consommation facturée pour septembre, 520 euros hors taxes. TVA à 20 %. Merci de régler le total de 624 euros avant le 20 octobre.",
+      "expected_label": "facture",
+      "prediction": {
+        "document_id": "new-f1",
+        "suggested_label": "facture",
+        "label": "facture",
+        "needs_review": false,
+        "cosine_score": 0.6609176397323608,
+        "margin": 0.18752434849739075
+      },
+      "correct": true
+    },
+    {
+      "id": "new-f2",
+      "text": "Honoraires de conseil pour la mission achevée en juillet. Montant exigible 1500 euros, paiement sous trente jours sur le compte indiqué.",
+      "expected_label": "facture",
+      "prediction": {
+        "document_id": "new-f2",
+        "suggested_label": "facture",
+        "label": "facture",
+        "needs_review": false,
+        "cosine_score": 0.5341118574142456,
+        "margin": 0.1134381890296936
+      },
+      "correct": true
+    },
+    {
+      "id": "new-r1",
+      "text": "Modification du dossier du salarié : son adresse personnelle a changé. Merci au service RH de mettre à jour les coordonnées utilisées pour sa fiche de paie.",
+      "expected_label": "ressources_humaines",
+      "prediction": {
+        "document_id": "new-r1",
+        "suggested_label": "assurance",
+        "label": null,
+        "needs_review": true,
+        "cosine_score": 0.31854698061943054,
+        "margin": 0.011290103197097778
+      },
+      "correct": false
+    },
+    {
+      "id": "new-r2",
+      "text": "Avenant au contrat de travail : la période d'essai du nouveau collaborateur est prolongée d'un mois avec son accord écrit et la signature de son responsable.",
+      "expected_label": "ressources_humaines",
+      "prediction": {
+        "document_id": "new-r2",
+        "suggested_label": "ressources_humaines",
+        "label": "ressources_humaines",
+        "needs_review": false,
+        "cosine_score": 0.5399238467216492,
+        "margin": 0.16813209652900696
+      },
+      "correct": true
+    },
+    {
+      "id": "new-a1",
+      "text": "Votre déclaration d'accident automobile a été reçue. La compagnie d'assurance prendra en charge les réparations, après déduction de la franchise de 300 euros.",
+      "expected_label": "assurance",
+      "prediction": {
+        "document_id": "new-a1",
+        "suggested_label": "assurance",
+        "label": "assurance",
+        "needs_review": false,
+        "cosine_score": 0.5244675874710083,
+        "margin": 0.07501733303070068
+      },
+      "correct": true
+    },
+    {
+      "id": "new-a2",
+      "text": "Conditions de la garantie responsabilité civile professionnelle : le plafond d'indemnisation est fixé à un million d'euros par sinistre. La cotisation annuelle reste inchangée.",
+      "expected_label": "assurance",
+      "prediction": {
+        "document_id": "new-a2",
+        "suggested_label": "assurance",
+        "label": "assurance",
+        "needs_review": false,
+        "cosine_score": 0.5932916402816772,
+        "margin": 0.08118695020675659
+      },
+      "correct": true
+    },
+    {
+      "id": "new-l1",
+      "text": "Votre expédition a quitté notre plateforme. Trois palettes seront présentées au quai du destinataire mardi. Le transporteur demande de confirmer l'horaire de réception.",
+      "expected_label": "livraison",
+      "prediction": {
+        "document_id": "new-l1",
+        "suggested_label": "livraison",
+        "label": "livraison",
+        "needs_review": false,
+        "cosine_score": 0.6520028710365295,
+        "margin": 0.2287965714931488
+      },
+      "correct": true
+    },
+    {
+      "id": "new-l2",
+      "text": "Bordereau de réception : deux colis refusés pour emballage déchiré et matériel endommagé. Le chauffeur et le réceptionnaire ont signé les réserves.",
+      "expected_label": "livraison",
+      "prediction": {
+        "document_id": "new-l2",
+        "suggested_label": "livraison",
+        "label": "livraison",
+        "needs_review": false,
+        "cosine_score": 0.5743621587753296,
+        "margin": 0.14774090051651
+      },
+      "correct": true
+    },
+    {
+      "id": "unknown-bail",
+      "text": "Bail commercial pour la location d'un local : le propriétaire et le locataire conviennent d'un loyer mensuel de 1200 euros. Le dépôt de garantie sera restitué à la fin du bail après état des lieux.",
+      "expected_label": null,
+      "prediction": {
+        "document_id": "unknown-bail",
+        "suggested_label": "facture",
+        "label": "facture",
+        "needs_review": false,
+        "cosine_score": 0.4549129605293274,
+        "margin": 0.06589698791503906
+      },
+      "correct": false
+    },
+    {
+      "id": "unknown-recette",
+      "text": "Recette de tarte aux pommes : préparer une pâte, éplucher quatre pommes, ajouter du sucre et cuire quarante minutes au four à 180 degrés.",
+      "expected_label": null,
+      "prediction": {
+        "document_id": "unknown-recette",
+        "suggested_label": "livraison",
+        "label": null,
+        "needs_review": true,
+        "cosine_score": 0.14170584082603455,
+        "margin": 0.0205625519156456
+      },
+      "correct": true
+    }
+  ]
+}

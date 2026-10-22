@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eninca-documents"
+version = "0.2.0"
+description = "Local document retrieval, assisted classification and reproducible CPU evaluation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "LicenseRef-Proprietary"
+license-files = ["LICENSE"]
+authors = [{name = "Pascal Montmory / ENINCA CONSULTING"}]
+dependencies = ["numpy>=1.26,<3", "onnxruntime==1.31.0", "tokenizers==0.23.3"]
+
+[project.scripts]
+eninca-documents = "eninca_documents.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+eninca_documents = ["model.lock.json"]

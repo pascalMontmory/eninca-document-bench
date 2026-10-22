@@ -1,0 +1,21 @@
+{
+  "description": "New authored French examples, fixed before inference; functional checks, not a client benchmark",
+  "queries": [
+    {"id":"new-q1","text":"Je veux travailler deux jours chez moi : où sont les règles ?","expected_id":"teletravail"},
+    {"id":"new-q2","text":"Qui est autorisé à consulter les informations des salariés ?","expected_id":"confidentialite"},
+    {"id":"new-q3","text":"On a mal classé mes fichiers scannés, à qui le signaler ?","expected_id":"reclamation-client"},
+    {"id":"new-q4","text":"Comment vérifier l'emplacement des boîtes dans les rayonnages ?","expected_id":"inventaire"}
+  ],
+  "documents": [
+    {"id":"new-f1","text":"Électricité des locaux : consommation facturée pour septembre, 520 euros hors taxes. TVA à 20 %. Merci de régler le total de 624 euros avant le 20 octobre.","expected_label":"facture"},
+    {"id":"new-f2","text":"Honoraires de conseil pour la mission achevée en juillet. Montant exigible 1500 euros, paiement sous trente jours sur le compte indiqué.","expected_label":"facture"},
+    {"id":"new-r1","text":"Modification du dossier du salarié : son adresse personnelle a changé. Merci au service RH de mettre à jour les coordonnées utilisées pour sa fiche de paie.","expected_label":"ressources_humaines"},
+    {"id":"new-r2","text":"Avenant au contrat de travail : la période d'essai du nouveau collaborateur est prolongée d'un mois avec son accord écrit et la signature de son responsable.","expected_label":"ressources_humaines"},
+    {"id":"new-a1","text":"Votre déclaration d'accident automobile a été reçue. La compagnie d'assurance prendra en charge les réparations, après déduction de la franchise de 300 euros.","expected_label":"assurance"},
+    {"id":"new-a2","text":"Conditions de la garantie responsabilité civile professionnelle : le plafond d'indemnisation est fixé à un million d'euros par sinistre. La cotisation annuelle reste inchangée.","expected_label":"assurance"},
+    {"id":"new-l1","text":"Votre expédition a quitté notre plateforme. Trois palettes seront présentées au quai du destinataire mardi. Le transporteur demande de confirmer l'horaire de réception.","expected_label":"livraison"},
+    {"id":"new-l2","text":"Bordereau de réception : deux colis refusés pour emballage déchiré et matériel endommagé. Le chauffeur et le réceptionnaire ont signé les réserves.","expected_label":"livraison"},
+    {"id":"unknown-bail","text":"Bail commercial pour la location d'un local : le propriétaire et le locataire conviennent d'un loyer mensuel de 1200 euros. Le dépôt de garantie sera restitué à la fin du bail après état des lieux.","expected_label":null},
+    {"id":"unknown-recette","text":"Recette de tarte aux pommes : préparer une pâte, éplucher quatre pommes, ajouter du sucre et cuire quarante minutes au four à 180 degrés.","expected_label":null}
+  ]
+}

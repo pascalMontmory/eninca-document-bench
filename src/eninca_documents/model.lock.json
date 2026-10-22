@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "ae06c001a2546bef168b9bf8f570ccb1a16aaa27",
+  "upstream_license": "Apache-2.0",
+  "files": {
+    "onnx/model.onnx": {
+      "size": 470301610,
+      "sha256": "10f7a088420252b26caf819236ca2c9d2987afd0fc06fec7553b542a5655a05a"
+    },
+    "tokenizer.json": {
+      "size": 9081518,
+      "sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8"
+    },
+    "README.md": {
+      "size": 4118,
+      "sha256": "4bcd81167dff9aa9dcd4cff0d8101f897382a9d5e31231940a50b74bf576d550"
+    }
+  }
+}

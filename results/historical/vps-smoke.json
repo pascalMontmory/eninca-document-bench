@@ -1,0 +1,347 @@
+{
+  "status": "pass",
+  "scope": "CPU prototype on authored synthetic French documents; not an industrial benchmark",
+  "backend": "ONNX Runtime CPUExecutionProvider",
+  "tpu_tested": false,
+  "encoder": {
+    "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "ae06c001a2546bef168b9bf8f570ccb1a16aaa27",
+    "onnx_sha256": "10f7a088420252b26caf819236ca2c9d2987afd0fc06fec7553b542a5655a05a",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "max_tokens": 128,
+    "stride": 16,
+    "pooling": "attention-mask-mean-then-l2",
+    "dimension": 384
+  },
+  "environment": {
+    "created_utc": "2026-10-22T10:01:00.587697+00:00",
+    "platform": "Linux",
+    "machine": "x86_64",
+    "cpu_model": "AMD EPYC-Milan Processor",
+    "logical_cpus": 16,
+    "python": "3.11.2",
+    "packages": {
+      "numpy": "2.4.6",
+      "onnxruntime": "1.31.0",
+      "tokenizers": "0.23.3"
+    },
+    "source_sha256": {
+      "__init__.py": "ea1965b6ea92a3e30d1b55a0c136da8f5e285fae635aca20ecc65405cc73199a",
+      "cli.py": "2248d27eed9621b825b08a48178720b596d28b047677cd6d7da54f20d78874d2",
+      "core.py": "54f0d15d7ac49c3a8cf2e84c02f54c5b80fcd95e6e098d487f20848a92654527",
+      "encoder.py": "3e73b6bde54fed4af4b0cb089a38595c7e6a1f3296be88b0799a8800fa7d1da8",
+      "model.lock.json": "e7badb3e4a852b6204314f82cce8bf3bae732170d64235aa1aa54296c0412d30",
+      "model.py": "a795bed081c3fdb936ad725022bc15669f53e8941d748a309b055679e7c429ad"
+    }
+  },
+  "data_sha256": {
+    "documents.jsonl": "9afc3e1e05fc9f0972c199d27b1647f5f6305e0d37d8f80e8242d9df617ab07a",
+    "evaluation.jsonl": "39b532c051345d46bc07e0f1c7ff36f34bc686792a143449b837503017a8c0f4",
+    "queries.json": "81a56e63c0867f9523c2ecdab0f9dfe4bd2a8bb9c2859054bfa04692ab5b245d",
+    "training.jsonl": "8a96a70d0f956f05c1314d3ca6f325018b0127d8eeabef8279c9362acb2cb320"
+  },
+  "setup_seconds_including_hash_checks": 1.9476796090602875,
+  "index_export_seconds": 0.0007919203490018845,
+  "end_to_end_index_seconds_excluding_model_setup": 0.3006433881819248,
+  "indexing_scope": "JSONL read, tokenization, all chunks, inference, pooling, validation, index export",
+  "timing_repetitions_are_not_independent_quality_samples": true,
+  "documents": 12,
+  "chunks": 13,
+  "max_abs_embedding_difference_between_batch_orders": 0.0,
+  "timings": [
+    {
+      "repetition": 1,
+      "tokenization_seconds": 0.0016535371541976929,
+      "inference_seconds": 0.3718923944979906,
+      "pooling_seconds": 0.0008274614810943604,
+      "tokens": 672,
+      "padded_tokens": 1299,
+      "chunks": 13,
+      "documents": 12,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": false,
+      "encode_seconds": 0.3746345639228821
+    },
+    {
+      "repetition": 1,
+      "tokenization_seconds": 0.0018367022275924683,
+      "inference_seconds": 0.2918220926076174,
+      "pooling_seconds": 0.000779174268245697,
+      "tokens": 672,
+      "padded_tokens": 1040,
+      "chunks": 13,
+      "documents": 12,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": true,
+      "encode_seconds": 0.29476126469671726
+    },
+    {
+      "repetition": 2,
+      "tokenization_seconds": 0.001499708741903305,
+      "inference_seconds": 0.2891375068575144,
+      "pooling_seconds": 0.0007778126746416092,
+      "tokens": 672,
+      "padded_tokens": 1040,
+      "chunks": 13,
+      "documents": 12,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": true,
+      "encode_seconds": 0.2916887253522873
+    },
+    {
+      "repetition": 2,
+      "tokenization_seconds": 0.0016033872961997986,
+      "inference_seconds": 0.37541808746755123,
+      "pooling_seconds": 0.0008684322237968445,
+      "tokens": 672,
+      "padded_tokens": 1299,
+      "chunks": 13,
+      "documents": 12,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": false,
+      "encode_seconds": 0.37815059535205364
+    },
+    {
+      "repetition": 3,
+      "tokenization_seconds": 0.0016347095370292664,
+      "inference_seconds": 0.37176167219877243,
+      "pooling_seconds": 0.0008378122001886368,
+      "tokens": 672,
+      "padded_tokens": 1299,
+      "chunks": 13,
+      "documents": 12,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": false,
+      "encode_seconds": 0.3745047729462385
+    },
+    {
+      "repetition": 3,
+      "tokenization_seconds": 0.001491336151957512,
+      "inference_seconds": 0.28319687955081463,
+      "pooling_seconds": 0.0007542222738265991,
+      "tokens": 672,
+      "padded_tokens": 1040,
+      "chunks": 13,
+      "documents": 12,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": true,
+      "encode_seconds": 0.2857107147574425
+    }
+  ],
+  "summary": {
+    "input_order": {
+      "median_encode_seconds": 0.3746345639228821,
+      "documents_per_second": 32.031214296794516,
+      "padding_fraction": 0.4826789838337182
+    },
+    "length_grouped": {
+      "median_encode_seconds": 0.2916887253522873,
+      "documents_per_second": 41.13974575296659,
+      "padding_fraction": 0.3538461538461538
+    }
+  },
+  "retrieval": {
+    "queries": 8,
+    "top1_accuracy": 0.875,
+    "mean_recall_at_3": 1.0,
+    "mrr_at_3": 0.9166666666666666,
+    "details": [
+      {
+        "id": "q1",
+        "retrieved_ids": [
+          "contrat-maintenance",
+          "conservation",
+          "facture-papier"
+        ],
+        "relevant_ids": [
+          "facture-papier"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 0.3333333333333333,
+        "top1_correct": false
+      },
+      {
+        "id": "q2",
+        "retrieved_ids": [
+          "procedure-conges",
+          "teletravail",
+          "securite-incendie"
+        ],
+        "relevant_ids": [
+          "procedure-conges"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 1.0,
+        "top1_correct": true
+      },
+      {
+        "id": "q3",
+        "retrieved_ids": [
+          "incident-eau",
+          "conservation",
+          "facture-papier"
+        ],
+        "relevant_ids": [
+          "incident-eau"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 1.0,
+        "top1_correct": true
+      },
+      {
+        "id": "q4",
+        "retrieved_ids": [
+          "reception-colis",
+          "conservation",
+          "incident-eau"
+        ],
+        "relevant_ids": [
+          "reception-colis"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 1.0,
+        "top1_correct": true
+      },
+      {
+        "id": "q5",
+        "retrieved_ids": [
+          "contrat-maintenance",
+          "conservation",
+          "inventaire"
+        ],
+        "relevant_ids": [
+          "contrat-maintenance"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 1.0,
+        "top1_correct": true
+      },
+      {
+        "id": "q6",
+        "retrieved_ids": [
+          "conservation",
+          "incident-eau",
+          "contrat-maintenance"
+        ],
+        "relevant_ids": [
+          "conservation"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 1.0,
+        "top1_correct": true
+      },
+      {
+        "id": "q7",
+        "retrieved_ids": [
+          "securite-incendie",
+          "incident-eau",
+          "conservation"
+        ],
+        "relevant_ids": [
+          "securite-incendie"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 1.0,
+        "top1_correct": true
+      },
+      {
+        "id": "q8",
+        "retrieved_ids": [
+          "formation",
+          "reclamation-client",
+          "confidentialite"
+        ],
+        "relevant_ids": [
+          "formation"
+        ],
+        "recall_at_3": 1.0,
+        "reciprocal_rank_at_3": 1.0,
+        "top1_correct": true
+      }
+    ]
+  },
+  "classification": {
+    "documents": 8,
+    "coverage": 1.0,
+    "accuracy_with_abstentions_as_errors": 1.0,
+    "accuracy_accepted": 1.0,
+    "macro_f1_with_abstentions_as_errors": 1.0
+  },
+  "predictions": [
+    {
+      "document_id": "eval-f1",
+      "suggested_label": "facture",
+      "label": "facture",
+      "needs_review": false,
+      "cosine_score": 0.6578930616378784,
+      "margin": 0.14967727661132812
+    },
+    {
+      "document_id": "eval-f2",
+      "suggested_label": "facture",
+      "label": "facture",
+      "needs_review": false,
+      "cosine_score": 0.558617115020752,
+      "margin": 0.07816952466964722
+    },
+    {
+      "document_id": "eval-r1",
+      "suggested_label": "ressources_humaines",
+      "label": "ressources_humaines",
+      "needs_review": false,
+      "cosine_score": 0.6305978298187256,
+      "margin": 0.29406678676605225
+    },
+    {
+      "document_id": "eval-r2",
+      "suggested_label": "ressources_humaines",
+      "label": "ressources_humaines",
+      "needs_review": false,
+      "cosine_score": 0.605667769908905,
+      "margin": 0.18706545233726501
+    },
+    {
+      "document_id": "eval-a1",
+      "suggested_label": "assurance",
+      "label": "assurance",
+      "needs_review": false,
+      "cosine_score": 0.5558383464813232,
+      "margin": 0.19943618774414062
+    },
+    {
+      "document_id": "eval-a2",
+      "suggested_label": "assurance",
+      "label": "assurance",
+      "needs_review": false,
+      "cosine_score": 0.5688859224319458,
+      "margin": 0.14912980794906616
+    },
+    {
+      "document_id": "eval-l1",
+      "suggested_label": "livraison",
+      "label": "livraison",
+      "needs_review": false,
+      "cosine_score": 0.6709290742874146,
+      "margin": 0.25462353229522705
+    },
+    {
+      "document_id": "eval-l2",
+      "suggested_label": "livraison",
+      "label": "livraison",
+      "needs_review": false,
+      "cosine_score": 0.6981450319290161,
+      "margin": 0.33538898825645447
+    }
+  ],
+  "abstention_thresholds": {
+    "min_score": 0.4,
+    "min_margin": 0.05
+  },
+  "thresholds_calibrated": false
+}

@@ -1,0 +1,276 @@
+{
+  "status": "pass",
+  "scope": "Public French guidance; CPU benchmark, not customer validation",
+  "environment": {
+    "created_utc": "2026-10-22T10:47:07.768811+00:00",
+    "platform": "Linux",
+    "machine": "x86_64",
+    "cpu_model": "AMD EPYC-Milan Processor",
+    "logical_cpus": 16,
+    "python": "3.11.2",
+    "packages": {
+      "numpy": "2.4.6",
+      "onnxruntime": "1.31.0",
+      "tokenizers": "0.23.3"
+    },
+    "source_sha256": {
+      "__init__.py": "ea1965b6ea92a3e30d1b55a0c136da8f5e285fae635aca20ecc65405cc73199a",
+      "calibration.py": "ceed29b60ed3b440b69deb2ca1f3d55a193660067110541dd6d2d787717dcfec",
+      "cli.py": "2248d27eed9621b825b08a48178720b596d28b047677cd6d7da54f20d78874d2",
+      "core.py": "54f0d15d7ac49c3a8cf2e84c02f54c5b80fcd95e6e098d487f20848a92654527",
+      "encoder.py": "3e73b6bde54fed4af4b0cb089a38595c7e6a1f3296be88b0799a8800fa7d1da8",
+      "model.lock.json": "e7badb3e4a852b6204314f82cce8bf3bae732170d64235aa1aa54296c0412d30",
+      "model.py": "a795bed081c3fdb936ad725022bc15669f53e8941d748a309b055679e7c429ad"
+    }
+  },
+  "encoder": {
+    "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "ae06c001a2546bef168b9bf8f570ccb1a16aaa27",
+    "onnx_sha256": "10f7a088420252b26caf819236ca2c9d2987afd0fc06fec7553b542a5655a05a",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "max_tokens": 128,
+    "stride": 16,
+    "pooling": "attention-mask-mean-then-l2",
+    "dimension": 384
+  },
+  "tpu_tested": false,
+  "corpus_checks": {
+    "documents": 220,
+    "families": 107,
+    "source_and_split_checks": "pass"
+  },
+  "data_manifest_sha256": "2d9dc7c77fa2f17f3c26af091ac00f4a6f0680015e75d67da8c1a379c5b95474",
+  "source_sha256": {
+    "benchmarks/run_public.py": "c73623d4511e7f5e0e495daafa8f2d3aa6a744afed2e2f316b6d68d8e375d293",
+    "scripts/assisted_classify.py": "35bc3418ba3d6912ad57af68401d203ea666b50be8498b8bedf351b03bed27bf",
+    "scripts/check_records.py": "368c94d7b48efe57e070792893a66fad76eb8f6e253e4270c1eb56590d3ae482",
+    "scripts/prepare_public_corpus.py": "d2c8c8ed10a3d56ed22fc2c732bf14e339c057746e5a656327afd84346920565",
+    "scripts/verify_corpus.py": "05cc1dd98452e47d82086fe7347a6e668a09bdc097501d6d294bfb5ea947fb0d",
+    "src/eninca_documents/__init__.py": "ea1965b6ea92a3e30d1b55a0c136da8f5e285fae635aca20ecc65405cc73199a",
+    "src/eninca_documents/calibration.py": "ceed29b60ed3b440b69deb2ca1f3d55a193660067110541dd6d2d787717dcfec",
+    "src/eninca_documents/cli.py": "2248d27eed9621b825b08a48178720b596d28b047677cd6d7da54f20d78874d2",
+    "src/eninca_documents/core.py": "54f0d15d7ac49c3a8cf2e84c02f54c5b80fcd95e6e098d487f20848a92654527",
+    "src/eninca_documents/encoder.py": "3e73b6bde54fed4af4b0cb089a38595c7e6a1f3296be88b0799a8800fa7d1da8",
+    "src/eninca_documents/model.lock.json": "e7badb3e4a852b6204314f82cce8bf3bae732170d64235aa1aa54296c0412d30",
+    "src/eninca_documents/model.py": "a795bed081c3fdb936ad725022bc15669f53e8941d748a309b055679e7c429ad"
+  },
+  "outputs_sha256": {
+    "calibration.json": "faa2870dcbe704f2095d667df7575323561779273a5d422fe9e910da17deea3a",
+    "quality.json": "bbaa38c7d5bc169506ba0018d0b3c0df6a0254ecd63411bf62b0ab378268e990",
+    "timings.csv": "a43cd364ec4078046b65864f9251eed3d8b9d31775f21b9888ab6ee4a6bf9c57"
+  },
+  "quality": {
+    "fixed_defaults": {
+      "documents": 80,
+      "known_documents": 60,
+      "unknown_documents": 20,
+      "accepted": 57,
+      "correct_accepted": 38,
+      "incorrect_accepted": 19,
+      "coverage": 0.7125,
+      "known_coverage": 0.7333333333333333,
+      "accepted_precision": 0.6666666666666666,
+      "accepted_precision_wilson95": [
+        0.5372251158005144,
+        0.7750619392484925
+      ],
+      "known_accuracy_counting_abstentions_as_errors": 0.6333333333333333,
+      "unknown_false_accepts": 13,
+      "unknown_false_accept_rate": 0.65,
+      "unknown_false_accept_wilson95": [
+        0.43285427668523624,
+        0.818808175898918
+      ]
+    },
+    "validation_calibrated": {
+      "documents": 80,
+      "known_documents": 60,
+      "unknown_documents": 20,
+      "accepted": 33,
+      "correct_accepted": 27,
+      "incorrect_accepted": 6,
+      "coverage": 0.4125,
+      "known_coverage": 0.5,
+      "accepted_precision": 0.8181818181818182,
+      "accepted_precision_wilson95": [
+        0.6561176836533009,
+        0.9138923179105933
+      ],
+      "known_accuracy_counting_abstentions_as_errors": 0.45,
+      "unknown_false_accepts": 3,
+      "unknown_false_accept_rate": 0.15,
+      "unknown_false_accept_wilson95": [
+        0.052368745896216595,
+        0.36041886474075696
+      ]
+    }
+  },
+  "model_setup_seconds": 1.926684895530343,
+  "quality_encoding_timings": {
+    "train": {
+      "tokenization_seconds": 0.21640065498650074,
+      "inference_seconds": 25.29467125236988,
+      "pooling_seconds": 0.05369754321873188,
+      "tokens": 90385,
+      "padded_tokens": 90800,
+      "chunks": 730,
+      "documents": 60,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": true,
+      "encode_seconds": 25.586090156808496
+    },
+    "validation": {
+      "tokenization_seconds": 0.27466374821960926,
+      "inference_seconds": 35.31302187778056,
+      "pooling_seconds": 0.0741101261228323,
+      "tokens": 126731,
+      "padded_tokens": 127096,
+      "chunks": 1024,
+      "documents": 80,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": true,
+      "encode_seconds": 35.69220093078911
+    },
+    "test": {
+      "tokenization_seconds": 0.28281608037650585,
+      "inference_seconds": 32.37100892700255,
+      "pooling_seconds": 0.0682145543396473,
+      "tokens": 118778,
+      "padded_tokens": 119168,
+      "chunks": 963,
+      "documents": 80,
+      "batch_size": 8,
+      "threads": 2,
+      "sort_by_length": true,
+      "encode_seconds": 32.75146032124758
+    }
+  },
+  "timing_document_ids": [
+    "F38243",
+    "F34757",
+    "F12814",
+    "F31679",
+    "F34769",
+    "F22395",
+    "F32920",
+    "F13607",
+    "F34905",
+    "F31858",
+    "F24585",
+    "F33999",
+    "F317",
+    "F34029",
+    "F1930",
+    "F23420",
+    "F14946",
+    "F2247",
+    "F19066",
+    "F34825",
+    "F37294",
+    "F39676",
+    "F803",
+    "F2064",
+    "F34342",
+    "F33890",
+    "F986",
+    "F34781",
+    "F2692",
+    "F1100",
+    "F21131",
+    "F748",
+    "F31187",
+    "F1653",
+    "F17608",
+    "F2842",
+    "F20744",
+    "F21887",
+    "F34826",
+    "F34210",
+    "F15341",
+    "F33779",
+    "F32795",
+    "F14745",
+    "F34996",
+    "F76",
+    "F34344",
+    "F2234"
+  ],
+  "timing_documents": 48,
+  "timing_chunks": 591,
+  "repetitions": 3,
+  "summary": [
+    {
+      "batch_size": 4,
+      "sort_by_length": false,
+      "median_seconds": 22.66112721711397,
+      "min_seconds": 21.969594974070787,
+      "max_seconds": 22.81030780635774,
+      "documents_per_second": 2.1181647117602247,
+      "chunks_per_second": 26.079903013547767,
+      "padding_fraction": 0.030271785109983074
+    },
+    {
+      "batch_size": 4,
+      "sort_by_length": true,
+      "median_seconds": 21.55402515269816,
+      "min_seconds": 21.325996927917004,
+      "max_seconds": 21.8564270157367,
+      "documents_per_second": 2.226962233733466,
+      "chunks_per_second": 27.4194725028433,
+      "padding_fraction": 0.0021491920126230912
+    },
+    {
+      "batch_size": 8,
+      "sort_by_length": false,
+      "median_seconds": 21.557170731946826,
+      "min_seconds": 20.95163346081972,
+      "max_seconds": 22.23575204052031,
+      "documents_per_second": 2.2266372798572314,
+      "chunks_per_second": 27.41547150824216,
+      "padding_fraction": 0.030271785109983074
+    },
+    {
+      "batch_size": 8,
+      "sort_by_length": true,
+      "median_seconds": 20.671875352039933,
+      "min_seconds": 19.923878774046898,
+      "max_seconds": 21.236206337809563,
+      "documents_per_second": 2.3219954253092614,
+      "chunks_per_second": 28.58956867412028,
+      "padding_fraction": 0.00501844618055558
+    },
+    {
+      "batch_size": 16,
+      "sort_by_length": false,
+      "median_seconds": 22.222792802378535,
+      "min_seconds": 21.44557153992355,
+      "max_seconds": 22.240742905065417,
+      "documents_per_second": 2.1599445410327767,
+      "chunks_per_second": 26.594317161466062,
+      "padding_fraction": 0.030271785109983074
+    },
+    {
+      "batch_size": 16,
+      "sort_by_length": true,
+      "median_seconds": 20.460921688005328,
+      "min_seconds": 20.028656037524343,
+      "max_seconds": 21.26349593140185,
+      "documents_per_second": 2.345935375342291,
+      "chunks_per_second": 28.884329308901957,
+      "padding_fraction": 0.009532296392309347
+    }
+  ],
+  "process_peak_rss_bytes": 1245876224,
+  "memory_scope": "Cumulative process high-water mark, including model, warmups and retained quality/reference embeddings; not per-configuration memory.",
+  "timing_scope": "Warm synchronous CPU encoding: tokenization, every overlapping chunk, inference, masked pooling and validation. Model setup, reads, exports and output comparisons excluded.",
+  "limitations": [
+    "No TPU or GPU inference measured.",
+    "Timing repeats reuse identical documents; not independent quality observations.",
+    "Empirical validation precision target is not a test-set guarantee; rejection can leave zero accepted examples.",
+    "Wilson intervals are descriptive binomial approximations; related documents need not be independent.",
+    "Frozen public guidance is a domain proxy; no OCR, scans or private records.",
+    "Timing configuration search has no separate performance confirmation campaign."
+  ]
+}

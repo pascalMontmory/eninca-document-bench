@@ -1,0 +1,24 @@
+test_calibration_requires_unknown_examples_and_valid_parameters (test_calibration.CalibrationContracts.test_calibration_requires_unknown_examples_and_valid_parameters) ... ok
+test_infeasible_target_rejects_all_without_claiming_accuracy (test_calibration.CalibrationContracts.test_infeasible_target_rejects_all_without_claiming_accuracy) ... ok
+test_unknown_false_accept_is_not_a_correct_prediction (test_calibration.CalibrationContracts.test_unknown_false_accept_is_not_a_correct_prediction) ... ok
+test_unknown_rejection_and_held_out_prediction (test_calibration.CalibrationContracts.test_unknown_rejection_and_held_out_prediction) ... ok
+test_validation_leakage_and_classifier_change_are_rejected (test_calibration.CalibrationContracts.test_validation_leakage_and_classifier_change_are_rejected) ... ok
+test_classification_and_abstention (test_documents.DocumentContracts.test_classification_and_abstention) ... ok
+test_empty_text_and_duplicate_ids_are_rejected (test_documents.DocumentContracts.test_empty_text_and_duplicate_ids_are_rejected) ... ok
+test_export_roundtrip_and_corruption_detection (test_documents.DocumentContracts.test_export_roundtrip_and_corruption_detection) ... ok
+test_input_retains_accents_and_whitespace (test_documents.DocumentContracts.test_input_retains_accents_and_whitespace) ... ok
+test_invalid_embeddings (test_documents.DocumentContracts.test_invalid_embeddings) ... ok
+test_mean_pool_excludes_padding (test_documents.DocumentContracts.test_mean_pool_excludes_padding) ... ok
+test_missing_or_invalid_chunks_fail (test_documents.DocumentContracts.test_missing_or_invalid_chunks_fail) ... ok
+test_no_accepted_predictions_has_no_defined_accuracy (test_documents.DocumentContracts.test_no_accepted_predictions_has_no_defined_accuracy) ... ok
+test_search_deduplicates_documents_and_retains_best_span (test_documents.DocumentContracts.test_search_deduplicates_documents_and_retains_best_span) ... ok
+test_search_ties_have_stable_document_order (test_documents.DocumentContracts.test_search_ties_have_stable_document_order) ... ok
+test_training_leakage_and_encoder_mismatch_fail (test_documents.DocumentContracts.test_training_leakage_and_encoder_mismatch_fail) ... ok
+test_batching_and_length_sort_preserve_embeddings_and_order (test_native_encoder.NativeEncoderContracts.test_batching_and_length_sort_preserve_embeddings_and_order) ... ok
+test_long_unicode_document_keeps_every_token (test_native_encoder.NativeEncoderContracts.test_long_unicode_document_keeps_every_token) ... ok
+test_query_is_not_silently_truncated (test_native_encoder.NativeEncoderContracts.test_query_is_not_silently_truncated) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.242s
+
+OK

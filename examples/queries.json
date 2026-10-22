@@ -1,0 +1,10 @@
+[
+  {"id":"q1","text":"Quand faut-il régler l'achat de ramettes ?","relevant_ids":["facture-papier"]},
+  {"id":"q2","text":"Comment demander des jours de vacances ?","relevant_ids":["procedure-conges"]},
+  {"id":"q3","text":"Qui rembourse les dégâts provoqués par une fuite ?","relevant_ids":["incident-eau"]},
+  {"id":"q4","text":"Que faire si les cartons sont cassés à leur arrivée ?","relevant_ids":["reception-colis"]},
+  {"id":"q5","text":"Comment mettre fin au service de réparation des scanners ?","relevant_ids":["contrat-maintenance"]},
+  {"id":"q6","text":"Peut-on effacer des pièces alors qu'un procès est en cours ?","relevant_ids":["conservation"]},
+  {"id":"q7","text":"Où aller lorsqu'il y a une alerte au feu ?","relevant_ids":["securite-incendie"]},
+  {"id":"q8","text":"Comment apprendre à détecter un message de phishing ?","relevant_ids":["formation"]}
+]
