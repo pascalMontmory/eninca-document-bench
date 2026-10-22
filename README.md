@@ -73,6 +73,8 @@ The encoder is the existing multilingual MiniLM model, not a newly trained ENINC
 
 CI checks unit contracts, split isolation and evidence consistency. Native model checks are available through manual workflow dispatch; the recorded local CPU run includes them. No CI performance numbers are advertised.
 
+**Hosted CI status, 22 October 2026:** [the first run](https://github.com/pascalMontmory/eninca-document-bench/actions/runs/39766001763) was blocked before any tests started. GitHub reports a recent-payment or spending-limit issue on the account. The 19 native tests and evidence checks passed locally; a successful hosted run remains to be obtained after that account issue is resolved.
+
 ## Rights
 
 Original integration code was developed for ENINCA CONSULTING. Access does not grant a general open-source or production license; see [LICENSE](LICENSE). Model, dependencies and DILA data retain their own rights and attribution: [third-party notices](THIRD_PARTY_NOTICES.md). No private legal documents are included.

@@ -1,0 +1,10 @@
+{
+  "recorded_date": "2026-10-22",
+  "run_id": 39766001763,
+  "run_url": "https://github.com/pascalMontmory/eninca-document-bench/actions/runs/39766001763",
+  "commit": "7de43d0b9930fa0e5ce6208694873adc26bc68b8",
+  "tests_started": false,
+  "hosted_validation_success": false,
+  "github_annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
+  "local_validation": "19 tests including native pinned-model inference passed; source/data/output evidence audit passed; wheel installation and assisted-classification CLI smoke passed."
+}

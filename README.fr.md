@@ -73,6 +73,8 @@ L'encodeur est le modèle multilingue MiniLM existant, pas un nouveau modèle en
 
 La CI contrôle les contrats unitaires, la séparation des données et la cohérence des preuves. Les tests avec le vrai modèle sont disponibles par déclenchement manuel du workflow ; l'essai CPU local archivé les inclut. Aucun chiffre de performance issu de la CI n'est mis en avant.
 
+**État de la CI hébergée au 22 octobre 2026 :** [le premier essai](https://github.com/pascalMontmory/eninca-document-bench/actions/runs/39766001763) a été bloqué avant tout lancement de test. GitHub signale un problème de paiement récent ou de plafond de dépenses du compte. Les 19 tests natifs et le contrôle des preuves passent localement ; une exécution hébergée réussie reste à obtenir après résolution de ce point de compte.
+
 ## Droits
 
 Le code d'intégration original a été développé pour ENINCA CONSULTING. L'accès ne vaut pas licence générale open source ou de production : voir [LICENSE](LICENSE). Le modèle, les dépendances et les données DILA conservent leurs propres droits et attributions : [notices tierces](THIRD_PARTY_NOTICES.md). Aucun document juridique privé n'est inclus.
