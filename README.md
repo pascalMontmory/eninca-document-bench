@@ -27,7 +27,7 @@ cd eninca-document-bench
 bash run.sh
 ```
 
-Private-repository access requires GitHub authentication and authorization. The script installs the library, downloads and verifies the pinned model, runs tests, then performs the public-data CPU benchmark. It writes a new `runs/<timestamp>-public-cpu/` directory. The full campaign can take several minutes depending on the machine; progress is printed. **It uploads nothing.**
+The repository is publicly readable and can be cloned without GitHub authentication. The script installs the library, downloads and verifies the pinned model, runs tests, then performs the public-data CPU benchmark. It writes a new `runs/<timestamp>-public-cpu/` directory. The full campaign can take several minutes depending on the machine; progress is printed. **It uploads nothing.**
 
 Reuse an existing model cache with `ENINCA_DOCUMENT_MODEL=/path/to/model bash run.sh`. If using the earlier Mac kit, that cache is normally `~/Downloads/eninca-documents/.models/minilm`; verify the path exists first.
 
@@ -71,9 +71,9 @@ Read [the measured results and failures](docs/en/results.md), [the exact protoco
 
 The encoder is the existing multilingual MiniLM model, not a newly trained ENINCA model. Retrieval is in-memory exact cosine search; it is not a million-document vector database. Long documents are averaged over overlapping chunks for classification, which can dilute a local topic. Cosine scores and margins are not probabilities. Index exports contain full text; treat them as confidential when using private documents.
 
-CI checks unit contracts, split isolation and evidence consistency. Native model checks are available through manual workflow dispatch; the recorded local CPU run includes them. No CI performance numbers are advertised.
+The CI workflow is prepared to check unit contracts, split isolation and evidence consistency. It is currently disabled on GitHub. Once re-enabled, it also supports optional native model checks through manual workflow dispatch; the recorded local CPU run includes them. No CI performance numbers are advertised.
 
-**Hosted CI status, 22 October 2026:** [the first run](https://github.com/pascalMontmory/eninca-document-bench/actions/runs/39766001763) was blocked before any tests started. GitHub reports a recent-payment or spending-limit issue on the account. The 19 native tests and evidence checks passed locally; a successful hosted run remains to be obtained after that account issue is resolved.
+**Hosted CI status, 22 October 2026:** [the first run](https://github.com/pascalMontmory/eninca-document-bench/actions/runs/39766001763) was blocked before any tests started. GitHub reported a recent-payment or spending-limit issue on the account. The workflow was then disabled at the repository owner's request. The 19 native tests and evidence checks passed locally; no successful hosted run is claimed.
 
 ## Rights
 

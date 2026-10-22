@@ -27,7 +27,7 @@ cd eninca-document-bench
 bash run.sh
 ```
 
-L'accès au dépôt privé nécessite une authentification GitHub et une autorisation. Le script installe la bibliothèque, télécharge et vérifie le modèle figé, exécute les tests puis le benchmark CPU public. Il crée `runs/<horodatage>-public-cpu/`. La campagne complète peut prendre plusieurs minutes selon la machine ; sa progression est affichée. **Aucun résultat n'est envoyé automatiquement.**
+Le dépôt est consultable publiquement et peut être cloné sans authentification GitHub. Le script installe la bibliothèque, télécharge et vérifie le modèle figé, exécute les tests puis le benchmark CPU public. Il crée `runs/<horodatage>-public-cpu/`. La campagne complète peut prendre plusieurs minutes selon la machine ; sa progression est affichée. **Aucun résultat n'est envoyé automatiquement.**
 
 Pour réutiliser un cache : `ENINCA_DOCUMENT_MODEL=/chemin/du/modele bash run.sh`. Avec l'ancien kit Mac, ce cache se trouve habituellement dans `~/Downloads/eninca-documents/.models/minilm` ; vérifier son existence.
 
@@ -71,9 +71,9 @@ Consulter [les résultats mesurés et les échecs](docs/fr/results.md), [le prot
 
 L'encodeur est le modèle multilingue MiniLM existant, pas un nouveau modèle entraîné par ENINCA. La recherche cosinus exacte fonctionne en mémoire ; ce n'est pas une base vectorielle pour des millions de documents. Pour le classement, la moyenne des fenêtres chevauchantes peut diluer un thème local. Les scores cosinus et les marges ne sont pas des probabilités. Les exports d'index contiennent le texte intégral : les traiter comme confidentiels avec des documents privés.
 
-La CI contrôle les contrats unitaires, la séparation des données et la cohérence des preuves. Les tests avec le vrai modèle sont disponibles par déclenchement manuel du workflow ; l'essai CPU local archivé les inclut. Aucun chiffre de performance issu de la CI n'est mis en avant.
+Le workflow CI est préparé pour contrôler les contrats unitaires, la séparation des données et la cohérence des preuves. Il est actuellement désactivé sur GitHub. Après réactivation, il permet aussi de lancer manuellement les tests optionnels avec le vrai modèle ; l'essai CPU local archivé les inclut. Aucun chiffre de performance issu de la CI n'est mis en avant.
 
-**État de la CI hébergée au 22 octobre 2026 :** [le premier essai](https://github.com/pascalMontmory/eninca-document-bench/actions/runs/39766001763) a été bloqué avant tout lancement de test. GitHub signale un problème de paiement récent ou de plafond de dépenses du compte. Les 19 tests natifs et le contrôle des preuves passent localement ; une exécution hébergée réussie reste à obtenir après résolution de ce point de compte.
+**État de la CI hébergée au 22 octobre 2026 :** [le premier essai](https://github.com/pascalMontmory/eninca-document-bench/actions/runs/39766001763) a été bloqué avant tout lancement de test. GitHub signalait un problème de paiement récent ou de plafond de dépenses du compte. Le workflow a ensuite été désactivé à la demande du propriétaire du dépôt. Les 19 tests natifs et le contrôle des preuves passent localement ; aucune exécution hébergée réussie n'est revendiquée.
 
 ## Droits
 
