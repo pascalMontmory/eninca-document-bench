@@ -1,0 +1,255 @@
+{
+  "schema": 1,
+  "status": "pass",
+  "plan": {
+    "schema": 1,
+    "created_utc": "2026-10-22T12:40:18.136262+00:00",
+    "input_kind": "public_dila",
+    "input_sha256": "2d9dc7c77fa2f17f3c26af091ac00f4a6f0680015e75d67da8c1a379c5b95474",
+    "timing_document_ids": [
+      "F2692",
+      "F317",
+      "F34905",
+      "F32920",
+      "F21887",
+      "F2247",
+      "F34769",
+      "F19066",
+      "F23420",
+      "F34757",
+      "F2234",
+      "F34344",
+      "F24585",
+      "F34781",
+      "F37294",
+      "F1100",
+      "F14745",
+      "F32795",
+      "F33890",
+      "F2064",
+      "F31679",
+      "F14946",
+      "F34029",
+      "F31187",
+      "F34210",
+      "F34825",
+      "F21131",
+      "F22395",
+      "F986",
+      "F1653",
+      "F33999",
+      "F76",
+      "F34996",
+      "F39676",
+      "F2842",
+      "F20744",
+      "F748",
+      "F34342",
+      "F31858",
+      "F33779",
+      "F17608",
+      "F13607",
+      "F12814",
+      "F34826",
+      "F1930",
+      "F38243",
+      "F803",
+      "F15341"
+    ],
+    "selected_texts_sha256": "cbcee9d9040d7a2fef9320ff8da1ab15772b255c461b92353747fd3c65710ec1",
+    "configurations": {
+      "reference": {
+        "batch_size": 4,
+        "sort_by_length": false,
+        "threads": 2
+      },
+      "length_grouped": {
+        "batch_size": 4,
+        "sort_by_length": true,
+        "threads": 2
+      }
+    },
+    "pair_orders": [
+      [
+        "reference",
+        "length_grouped"
+      ],
+      [
+        "length_grouped",
+        "reference"
+      ],
+      [
+        "length_grouped",
+        "reference"
+      ],
+      [
+        "reference",
+        "length_grouped"
+      ],
+      [
+        "reference",
+        "length_grouped"
+      ],
+      [
+        "reference",
+        "length_grouped"
+      ],
+      [
+        "length_grouped",
+        "reference"
+      ]
+    ],
+    "atol": 3e-05,
+    "rtol": 3e-05,
+    "source_sha256": {
+      "benchmarks/comparison.py": "7662def06518d87c6810738ad09142c58254c25ec8589ebe0afc2728f9be6965",
+      "src/eninca_documents/__init__.py": "ea1965b6ea92a3e30d1b55a0c136da8f5e285fae635aca20ecc65405cc73199a",
+      "src/eninca_documents/calibration.py": "ceed29b60ed3b440b69deb2ca1f3d55a193660067110541dd6d2d787717dcfec",
+      "src/eninca_documents/cli.py": "2248d27eed9621b825b08a48178720b596d28b047677cd6d7da54f20d78874d2",
+      "src/eninca_documents/core.py": "54f0d15d7ac49c3a8cf2e84c02f54c5b80fcd95e6e098d487f20848a92654527",
+      "src/eninca_documents/encoder.py": "3e73b6bde54fed4af4b0cb089a38595c7e6a1f3296be88b0799a8800fa7d1da8",
+      "src/eninca_documents/model.py": "a795bed081c3fdb936ad725022bc15669f53e8941d748a309b055679e7c429ad",
+      "src/eninca_documents/model.lock.json": "e7badb3e4a852b6204314f82cce8bf3bae732170d64235aa1aa54296c0412d30"
+    }
+  },
+  "backend": "ONNX Runtime CPUExecutionProvider",
+  "tpu_tested": false,
+  "environment": {
+    "created_utc": "2026-10-22T12:48:28.622306+00:00",
+    "platform": "Linux",
+    "machine": "x86_64",
+    "cpu_model": "AMD EPYC-Milan Processor",
+    "logical_cpus": 16,
+    "python": "3.11.2",
+    "packages": {
+      "numpy": "2.4.6",
+      "onnxruntime": "1.31.0",
+      "tokenizers": "0.23.3"
+    },
+    "source_sha256": {
+      "__init__.py": "ea1965b6ea92a3e30d1b55a0c136da8f5e285fae635aca20ecc65405cc73199a",
+      "calibration.py": "ceed29b60ed3b440b69deb2ca1f3d55a193660067110541dd6d2d787717dcfec",
+      "cli.py": "2248d27eed9621b825b08a48178720b596d28b047677cd6d7da54f20d78874d2",
+      "core.py": "54f0d15d7ac49c3a8cf2e84c02f54c5b80fcd95e6e098d487f20848a92654527",
+      "encoder.py": "3e73b6bde54fed4af4b0cb089a38595c7e6a1f3296be88b0799a8800fa7d1da8",
+      "model.lock.json": "e7badb3e4a852b6204314f82cce8bf3bae732170d64235aa1aa54296c0412d30",
+      "model.py": "a795bed081c3fdb936ad725022bc15669f53e8941d748a309b055679e7c429ad"
+    }
+  },
+  "encoder": {
+    "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "ae06c001a2546bef168b9bf8f570ccb1a16aaa27",
+    "onnx_sha256": "10f7a088420252b26caf819236ca2c9d2987afd0fc06fec7553b542a5655a05a",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "max_tokens": 128,
+    "stride": 16,
+    "pooling": "attention-mask-mean-then-l2",
+    "dimension": 384
+  },
+  "documents": 48,
+  "chunks": 591,
+  "repetitions": 7,
+  "variants": {
+    "reference": {
+      "median_index_seconds": 22.62365287542343,
+      "min_index_seconds": 20.116320930421352,
+      "max_index_seconds": 24.009096264839172,
+      "median_encode_seconds": 22.604374937713146,
+      "median_export_seconds": 0.012023355811834335,
+      "documents_per_second": 2.1216732887615795,
+      "chunks_per_second": 26.12310236787695,
+      "padding_fraction": 0.030271785109983074
+    },
+    "length_grouped": {
+      "median_index_seconds": 22.12451307848096,
+      "min_index_seconds": 21.52408400736749,
+      "max_index_seconds": 22.864155787974596,
+      "median_encode_seconds": 22.104829913005233,
+      "median_export_seconds": 0.014330251142382622,
+      "documents_per_second": 2.169539272106576,
+      "chunks_per_second": 26.712452287812216,
+      "padding_fraction": 0.0021491920126230912
+    }
+  },
+  "comparison": {
+    "pairs": 7,
+    "median_paired_speedup": 0.9985415437918702,
+    "median_paired_time_reduction_pct": -0.14605864094461296,
+    "paired_speedup_bootstrap95": [
+      0.9345959123526801,
+      1.0413455027809275
+    ],
+    "faster_pairs": 3,
+    "verdict": "inconclusive",
+    "uncertainty": "Descriptive paired percentile bootstrap, 10000 resamples. Few repeated timings on identical documents; shared-host drift and workload generalization are not covered."
+  },
+  "quality": {
+    "status": "pass",
+    "documents": 80,
+    "matching_decisions": 80,
+    "max_abs_embedding_difference": 0.0,
+    "reference": {
+      "documents": 80,
+      "known_documents": 60,
+      "unknown_documents": 20,
+      "accepted": 33,
+      "correct_accepted": 27,
+      "incorrect_accepted": 6,
+      "coverage": 0.4125,
+      "known_coverage": 0.5,
+      "accepted_precision": 0.8181818181818182,
+      "accepted_precision_wilson95": [
+        0.6561176836533009,
+        0.9138923179105933
+      ],
+      "known_accuracy_counting_abstentions_as_errors": 0.45,
+      "unknown_false_accepts": 3,
+      "unknown_false_accept_rate": 0.15,
+      "unknown_false_accept_wilson95": [
+        0.052368745896216595,
+        0.36041886474075696
+      ]
+    },
+    "optimized": {
+      "documents": 80,
+      "known_documents": 60,
+      "unknown_documents": 20,
+      "accepted": 33,
+      "correct_accepted": 27,
+      "incorrect_accepted": 6,
+      "coverage": 0.4125,
+      "known_coverage": 0.5,
+      "accepted_precision": 0.8181818181818182,
+      "accepted_precision_wilson95": [
+        0.6561176836533009,
+        0.9138923179105933
+      ],
+      "known_accuracy_counting_abstentions_as_errors": 0.45,
+      "unknown_false_accepts": 3,
+      "unknown_false_accept_rate": 0.15,
+      "unknown_false_accept_wilson95": [
+        0.052368745896216595,
+        0.36041886474075696
+      ]
+    },
+    "retrieval_quality": "not_evaluated: no independent public relevance judgments",
+    "human_review_time": "not_measured"
+  },
+  "peak_process_rss_bytes": 1225035776,
+  "campaign_seconds": 490.5190534032881,
+  "outputs_sha256": {
+    "calibration.json": "faa2870dcbe704f2095d667df7575323561779273a5d422fe9e910da17deea3a",
+    "timings.csv": "c8fb7b44406205925b11e04804797f71742b24c401bb04fa070582912220ce81",
+    "predictions.json": "3fd2e89953c86f186bef50ad3be37d7ba74f35299bca8fe3cbe5e000168ad8b4",
+    "plan.json": "c5cfcf7b7b277226821b6e9f781051f14f902fbd7551ec5f0d241c340aa65b33"
+  },
+  "timing_scope": "Warm synchronous complete local indexing: JSONL read, tokenization, all chunks, CPU inference, pooling, validation and buffered index export. Model setup, warmups, quality evaluation, output comparisons and temporary-directory cleanup excluded. No fsync or remote storage.",
+  "memory_scope": "Cumulative process peak including initialization, quality/reference arrays and any pre-existing demo state; not memory per variant.",
+  "limitations": [
+    "Both arms use the same existing MiniLM model and ENINCA encoder; reference is not a customer or commercial product.",
+    "Only length grouping changes. Fixed batch size four, no parameter search in this campaign.",
+    "Timing documents and model have been used in earlier experiments; new measurements are not unseen workload validation.",
+    "Repeated timings on a shared machine do not establish industrial throughput or cost savings.",
+    "No OCR, accelerator, business retrieval quality or human-review-time gain established."
+  ]
+}

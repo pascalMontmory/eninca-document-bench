@@ -30,10 +30,11 @@ La préparation encode 60 documents d’apprentissage, 80 de validation et 80 de
 
 Préparer l’index avant le rendez-vous. Pour partir sans décision humaine, utiliser un état neuf : `bash demo.sh --state-dir runs/demo-presentation`. Ce nouvel état nécessite sa propre première indexation.
 
-1. **Recherche, une minute.** Cliquer sur « Logement à louer » ou poser une question courte. Ouvrir un résultat : passage, texte intégral et source sont accessibles. Il s’agit de recherche dans des textes existants, pas d’une réponse rédigée par une IA. Le score est une similarité, pas une probabilité.
-2. **Classement, deux minutes.** Ouvrir « Classer et vérifier », puis « Abstentions à examiner ». Lire un document, choisir un thème ou « Hors des quatre thèmes » et enregistrer. Montrer aussi qu’une proposition retenue automatiquement peut être corrigée. Une proposition automatique n’est jamais présentée comme une validation humaine.
-3. **Bilan, une minute.** Montrer les décisions, les documents restant à examiner et les suggestions corrigées. Les résultats initiaux du modèle restent séparés : la revue humaine ne les améliore pas artificiellement.
-4. **Export, une minute.** Télécharger le CSV : suggestion initiale, décision humaine, date et identifiant de configuration. Les 80 lignes sont exportées, y compris celles sans décision. Dans « Décisions enregistrées », une décision peut être modifiée ou remise à examiner.
+1. **Comparaison, une minute.** Le premier onglet présente la campagne archivée, la machine mesurée et le verdict. Montrer les deux temps, les erreurs conservées et le téléchargement des preuves. Pour une nouvelle mesure, lancer avant le rendez-vous : les autres fonctions attendent pendant l’essai. [Lire le protocole comparatif](comparison.md).
+2. **Recherche, une minute.** Cliquer sur « Logement à louer » ou poser une question courte. Ouvrir un résultat : passage, texte intégral et source sont accessibles. Il s’agit de recherche dans des textes existants, pas d’une réponse rédigée par une IA. Le score est une similarité, pas une probabilité.
+3. **Classement, une minute.** Ouvrir « Classer et vérifier », puis « Abstentions à examiner ». Lire un document, choisir un thème ou « Hors des quatre thèmes » et enregistrer. Montrer aussi qu’une proposition retenue automatiquement peut être corrigée. Une proposition automatique n’est jamais présentée comme une validation humaine.
+4. **Bilan, une minute.** Montrer les décisions, les documents restant à examiner et les suggestions corrigées. Les résultats initiaux du modèle restent séparés : la revue humaine ne les améliore pas artificiellement.
+5. **Export, une minute.** Télécharger le CSV : suggestion initiale, décision humaine, date et identifiant de configuration. Les 80 lignes sont exportées, y compris celles sans décision. Dans « Décisions enregistrées », une décision peut être modifiée ou remise à examiner.
 
 L’interface peut passer en anglais ; les textes DILA restent en français. Les exemples ne constituent pas un test de qualité de recherche : la pertinence doit être évaluée sur des questions indépendantes avant toute promesse commerciale.
 
@@ -45,6 +46,8 @@ L’interface peut passer en anglais ; les textes DILA restent en français. Les
 - **Suggestions corrigées** : avis humain différent du premier thème suggéré, y compris « hors périmètre ». Ce compteur recoupe les décisions hors périmètre ; les quatre cartes ne s’additionnent pas.
 - **Précision automatique** : propositions automatiques correctes selon les étiquettes publiques de référence, divisées par les propositions acceptées. Ce n’est ni la couverture ni la précision des avis humains. L’intervalle et les faux positifs hors périmètre sont affichés.
 - **Temps** : préparation de la session, encodage initial conservé dans le cache, recherches de la session. Un chargement de cache n’est pas un nouvel encodage chronométré.
+
+Le premier onglet chronomètre séparément les deux configurations d’indexation ; les temps de préparation et de recherche dans « Bilan » ont un autre périmètre.
 
 La configuration utilise quatre documents par lot, le tri par longueur et deux threads CPU. Ce choix issu du petit essai Mac n’est pas un optimum garanti. Les benchmarks historiques restent dans [les résultats](results.md) ; la démonstration recalcule ses résultats avec le modèle local.
 

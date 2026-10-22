@@ -10,7 +10,7 @@ const translations = {
 const categories = {fr:{N19803:"Argent · Impôts · Consommation",N19806:"Travail · Formation",N19808:"Logement",N19811:"Social · Santé"},en:{N19803:"Money · Tax · Consumer rights",N19806:"Work · Training",N19808:"Housing",N19811:"Social support · Health"}};
 let lang = "fr";
 try { lang = localStorage.getItem("eninca-language") === "en" ? "en" : "fr"; } catch {}
-let state, token, selected, view="search", searchResult, status, busy=false, toastTimer;
+let state, token, selected, view="performance", searchResult, status, busy=false, toastTimer;
 const $ = (id) => document.getElementById(id);
 const t = (key) => translations[lang][key] || key;
 const label = (key) => key === "out_of_scope" ? t("outside") : (categories[lang][key] || key);
@@ -36,6 +36,7 @@ function translate() {
   if(status)renderStatus();
   if(searchResult)renderSearch();
   if(state){renderReview();renderSummary();}
+  if(window.renderComparison)window.renderComparison();
 }
 function renderStatus() {
   const phases=["starting","checking_corpus","loading_model","indexing_train","indexing_validation","indexing_test","calibrating"];
@@ -48,7 +49,7 @@ async function poll() {
   try {
     status=await api("/api/status");token=status.token;renderStatus();
     if(status.error){error("failure");$("progress").hidden=true;return;}
-    if(status.ready){await refresh();$("loading").hidden=true;$("application").hidden=false;return;}
+    if(status.ready){try{await refresh();}catch(exc){if(exc.message!=="benchmark_busy")throw exc;}$("loading").hidden=true;$("application").hidden=false;if(window.renderComparison)window.renderComparison();return;}
     setTimeout(poll,1200);
   } catch(exc) {error(exc.message);}
 }
@@ -133,7 +134,7 @@ document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener
   view=button.dataset.view;clearError();
   document.querySelectorAll("[data-view]").forEach(b=>{b.classList.toggle("active",b.dataset.view===view);if(b.dataset.view===view)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   document.querySelectorAll(".view").forEach(v=>v.hidden=v.id!==view+"-view");
-  if(state){try{await refresh();}catch(exc){error(exc.message);}}
+  if(status?.ready&&view!=="performance"){try{await refresh();}catch(exc){error(exc.message);}}
 }));
 $("language").addEventListener("change",()=>{lang=$("language").value;try{localStorage.setItem("eninca-language",lang);}catch{}translate();});
 $("close-dialog").addEventListener("click",()=>$("document-dialog").close());

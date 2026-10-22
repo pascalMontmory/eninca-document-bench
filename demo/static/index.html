@@ -7,6 +7,7 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
   <script src="/app.js" defer></script>
+  <script src="/performance.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main" data-t="skip">Aller au contenu</a>
@@ -14,7 +15,8 @@
     <div class="brand"><span class="monogram" aria-hidden="true">E</span><div>ENINCA<span>CONSULTING</span></div></div>
     <div class="workspace-label" data-t="workspace">Atelier documentaire</div>
     <nav aria-label="Navigation">
-      <button class="nav-button active" data-view="search" aria-current="page"><span>01</span><span data-t="searchTab">Rechercher</span></button>
+      <button class="nav-button active" data-view="performance" aria-current="page"><span>↗</span><span data-t="performanceTab">Comparer les performances</span></button>
+      <button class="nav-button" data-view="search"><span>01</span><span data-t="searchTab">Rechercher</span></button>
       <button class="nav-button" data-view="review"><span>02</span><span data-t="reviewTab">Classer et vérifier</span></button>
       <button class="nav-button" data-view="summary"><span>03</span><span data-t="summaryTab">Faire le bilan</span></button>
     </nav>
@@ -27,7 +29,28 @@
       <section id="loading" class="setup" aria-live="polite"><p class="eyebrow">ENINCA DOCUMENTS</p><h1 data-t="preparing">Préparation de votre atelier</h1><p data-t="preparingNote">Le premier lancement crée les index. Les suivants les réutilisent.</p><p id="phase"></p><progress id="progress" aria-labelledby="phase" max="6" value="0"></progress><p id="elapsed" class="muted"></p></section>
       <div id="error" role="alert" hidden></div>
       <div id="application" hidden>
-        <section id="search-view" class="view">
+        <section id="performance-view" class="view">
+          <p class="eyebrow" data-t="performanceEyebrow">ÉVALUATION COMPARATIVE · CPU</p>
+          <h1 data-t="performanceTitle">Mesurer le temps et contrôler la qualité.</h1>
+          <p class="lead" data-t="performanceLead">Comparez la création d’un index documentaire avec et sans regroupement par longueur. Même modèle, mêmes textes, mêmes ressources.</p>
+          <div class="benchmark-scope"><strong data-t="scopeTitle">Ce qui est comparé</strong><p data-t="scopeDescription">Deux configurations de notre encodeur MiniLM / ONNX sur CPU : ordre d’entrée et regroupement par longueur. Ce n’est pas une comparaison avec votre outil métier, ni un essai TPU.</p></div>
+          <div class="benchmark-controls"><button id="benchmark-start" class="primary" data-t="benchmarkStart">Lancer un nouvel essai</button><button id="benchmark-cancel" class="quiet" hidden data-t="benchmarkCancel">Arrêter après le passage en cours</button><span class="muted" data-t="protocolShort">48 textes · 7 paires · lots de 4 · 2 threads</span></div>
+          <p class="fineprint" data-t="runNote">Prévoir plusieurs minutes. Les deux versions sont préchauffées ; leur ordre est alterné et mélangé. Les autres fonctions attendent pendant la mesure.</p>
+          <div id="benchmark-progress-box" class="panel" hidden aria-live="polite"><p id="benchmark-progress-text"></p><progress id="benchmark-progress" aria-labelledby="benchmark-progress-text" value="0" max="20"></progress></div>
+          <p id="benchmark-error" class="benchmark-warning" role="alert" hidden></p>
+          <div id="benchmark-empty" class="empty"><h2 data-t="noComparison">Pas encore de comparaison terminée.</h2><p data-t="noComparisonNote">Lancez l’essai pour obtenir deux mesures vérifiées et les résultats bruts.</p></div>
+          <div id="benchmark-result" hidden>
+            <p id="benchmark-origin" class="muted"></p>
+            <section id="benchmark-verdict" class="benchmark-verdict" aria-live="polite"><h2 id="verdict-heading"></h2><p id="verdict-detail"></p></section>
+            <div class="comparison-table-wrapper"><table class="comparison-table"><caption data-t="tableCaption">Création complète de l’index après préchauffage</caption><thead><tr><th scope="col" data-t="measure">Mesure</th><th scope="col" data-t="reference">Référence · ordre d’entrée</th><th scope="col" data-t="optimized">Regroupement par longueur</th></tr></thead><tbody id="comparison-values"></tbody></table></div>
+            <div class="paired-note" id="paired-detail"></div>
+            <section class="panel"><h2 data-t="qualityGate">Le résultat fonctionnel est-il préservé ?</h2><div id="comparison-quality" class="metric-lines"></div><p class="fineprint" data-t="qualityGateNote">Des sorties proches et des décisions identiques ne rendent pas le modèle plus juste. Les erreurs existantes restent comptées. Pertinence de recherche et temps de revue humaine ne sont pas mesurés ici.</p></section>
+            <section class="panel"><h2 data-t="costTitle">Chiffrer une hypothèse de coût</h2><p data-t="costLead">Saisissez votre tarif de machine. Aucun prix fournisseur n’est supposé.</p><div class="cost-inputs"><label><span data-t="hourlyRate">Coût machine en €/heure</span><input id="hourly-rate" type="number" min="0" max="1000000" step="any" placeholder="0.00"></label><label><span data-t="volume">Nombre de textes</span><input id="cost-volume" type="number" min="1" max="10000000" step="1" value="1000"></label></div><div id="cost-output" aria-live="polite"></div><p class="fineprint" data-t="costLimit">Extrapolation linéaire du petit lot mesuré, pour des textes et une charge comparables. Hors chargement du modèle, OCR, stockage distant, intégration et corrections humaines. Ni devis ni économie de production démontrée.</p></section>
+            <div class="export-row"><div><h2 data-t="evidenceTitle">Vérifier les chiffres</h2><p data-t="evidenceNote">Protocole figé, temps bruts, prédictions et empreintes des sources.</p></div><div class="download-links"><a class="quiet button" href="/api/benchmark/download?format=csv" download data-t="downloadTimings">Temps CSV</a><a class="primary button" href="/api/benchmark/download?format=zip" download data-t="downloadEvidence">Dossier de preuves</a></div></div>
+            <section class="panel"><h2 data-t="nextPilotTitle">Ce qu’une équipe peut décider avec cet essai</h2><p data-t="nextPilotText">Le regroupement mérite-t-il d’être retenu dans cette configuration ? Pour comparer à un outil existant, il faut ensuite un même lot représentatif, des réponses attendues et les temps de votre processus. Le classement accepté doit rester assez précis, et le coût de la revue humaine doit être inclus.</p></section>
+          </div>
+        </section>
+        <section id="search-view" class="view" hidden>
           <p class="eyebrow" data-t="step1">01 / EXPLORER</p>
           <h1 data-t="searchTitle">Retrouver l’information utile.</h1>
           <p class="lead" data-t="searchLead">Posez une question. Retrouvez les passages pertinents dans 220 fiches administratives françaises.</p>
@@ -45,14 +68,14 @@
           <p class="lead" data-t="reviewLead">Vérifiez les propositions sur les 80 documents de test séparés de l’apprentissage et de la calibration.</p>
           <div class="review-toolbar"><label for="review-filter" data-t="filter">Afficher</label><select id="review-filter"><option value="pending" data-t="pending">À examiner</option><option value="abstained" data-t="abstained">Abstentions à examiner</option><option value="done" data-t="done">Décisions enregistrées</option><option value="all" data-t="all">Tous les documents</option></select><span id="review-count" class="muted" aria-live="polite"></span></div>
           <div class="review-layout"><div id="review-list" class="review-list" aria-label="Documents"></div><section id="review-detail" class="review-detail" aria-live="polite"></section></div>
-          <p class="fineprint" data-t="reviewLimit">Les scores ne sont pas des probabilités. Vos décisions sont conservées sur cet ordinateur ; elles ne réentraînent pas le modèle.</p>
+          <p class="fineprint" data-t="reviewLimit">Les scores ne sont pas des probabilités. Vos décisions sont conservées sur l’hôte du serveur ; elles ne réentraînent pas le modèle.</p>
         </section>
         <section id="summary-view" class="view" hidden>
           <p class="eyebrow" data-t="step3">03 / MESURER</p><h1 data-t="summaryTitle">Un bilan que vous pouvez vérifier.</h1><p class="lead" data-t="summaryLead">Votre travail de revue et les limites du modèle, présentés séparément.</p>
           <div id="summary-cards" class="cards"></div>
           <div class="export-row"><div><h2 data-t="exportTitle">Conserver les décisions</h2><p data-t="exportNote">Un CSV avec les propositions initiales, les décisions humaines et leurs dates.</p></div><a class="primary button" href="/api/export.csv" download data-t="export">Exporter les 80 lignes</a></div>
           <section class="panel"><h2 data-t="modelResults">Résultats du modèle avant revue humaine</h2><p data-t="modelResultsNote">Mesurés sur les 80 documents de test publics. Les seuils proviennent uniquement des 80 documents de validation.</p><div id="model-metrics" class="metric-lines"></div><p class="fineprint" data-t="qualityLimit">Petit corpus administratif, quatre thèmes connus. Ces résultats ne garantissent pas la qualité sur vos documents. La revue humaine reste nécessaire.</p></section>
-          <section class="panel"><h2 data-t="timingTitle">Temps observés sur cet ordinateur</h2><div id="timing-metrics" class="metric-lines"></div><p class="fineprint" data-t="timingLimit">Temps de cette démonstration, pas un benchmark comparatif. Ils ne mesurent ni un gain industriel ni une économie de coûts.</p></section>
+          <section class="panel"><h2 data-t="timingTitle">Temps observés sur l’hôte du serveur</h2><div id="timing-metrics" class="metric-lines"></div><p class="fineprint" data-t="timingLimit">Temps de cette démonstration, pas un benchmark comparatif. Ils ne mesurent ni un gain industriel ni une économie de coûts.</p></section>
         </section>
       </div>
     </main>

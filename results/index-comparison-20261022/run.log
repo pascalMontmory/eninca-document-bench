@@ -1,0 +1,51 @@
+{"phase": "checking_data", "completed": 0, "total": 20, "elapsed_seconds": 4.129484295845032e-06}
+{"phase": "quality_train", "completed": 0, "total": 20, "elapsed_seconds": 0.031145023182034492}
+{"phase": "quality_validation", "completed": 1, "total": 20, "elapsed_seconds": 26.634844122454524}
+{"phase": "quality_reference", "completed": 2, "total": 20, "elapsed_seconds": 66.54987421445549}
+{"phase": "quality_optimized", "completed": 3, "total": 20, "elapsed_seconds": 104.74019921198487}
+{"phase": "quality_pass", "completed": 4, "total": 20, "elapsed_seconds": 141.35129131563008}
+{"phase": "warmup", "completed": 4, "total": 20, "elapsed_seconds": 141.3545113708824, "variant": "reference"}
+{"phase": "warmup_done", "completed": 5, "total": 20, "elapsed_seconds": 162.99485296197236, "variant": "reference"}
+{"phase": "warmup", "completed": 5, "total": 20, "elapsed_seconds": 162.9949042275548, "variant": "length_grouped"}
+{"phase": "warmup_done", "completed": 6, "total": 20, "elapsed_seconds": 185.7593479193747, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 6, "total": 20, "elapsed_seconds": 185.75939300842583, "pair": 1, "pairs": 7, "variant": "reference"}
+{"phase": "measurement_done", "completed": 7, "total": 20, "elapsed_seconds": 207.70092373155057, "pair": 1, "pairs": 7, "variant": "reference"}
+{"phase": "measurement", "completed": 7, "total": 20, "elapsed_seconds": 207.70096364989877, "pair": 1, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement_done", "completed": 8, "total": 20, "elapsed_seconds": 229.4333116542548, "pair": 1, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 8, "total": 20, "elapsed_seconds": 229.43334826640785, "pair": 2, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement_done", "completed": 9, "total": 20, "elapsed_seconds": 252.33029157482088, "pair": 2, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 9, "total": 20, "elapsed_seconds": 252.33032738789916, "pair": 2, "pairs": 7, "variant": "reference"}
+{"phase": "measurement_done", "completed": 10, "total": 20, "elapsed_seconds": 272.41752756759524, "pair": 2, "pairs": 7, "variant": "reference"}
+{"phase": "measurement", "completed": 10, "total": 20, "elapsed_seconds": 272.4176677260548, "pair": 3, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement_done", "completed": 11, "total": 20, "elapsed_seconds": 292.12403958290815, "pair": 3, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 11, "total": 20, "elapsed_seconds": 292.1243483796716, "pair": 3, "pairs": 7, "variant": "reference"}
+{"phase": "measurement_done", "completed": 12, "total": 20, "elapsed_seconds": 313.8890643157065, "pair": 3, "pairs": 7, "variant": "reference"}
+{"phase": "measurement", "completed": 12, "total": 20, "elapsed_seconds": 313.8891087025404, "pair": 4, "pairs": 7, "variant": "reference"}
+{"phase": "measurement_done", "completed": 13, "total": 20, "elapsed_seconds": 336.00035673193634, "pair": 4, "pairs": 7, "variant": "reference"}
+{"phase": "measurement", "completed": 13, "total": 20, "elapsed_seconds": 336.0003908909857, "pair": 4, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement_done", "completed": 14, "total": 20, "elapsed_seconds": 357.80305807851255, "pair": 4, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 14, "total": 20, "elapsed_seconds": 357.8031097315252, "pair": 5, "pairs": 7, "variant": "reference"}
+{"phase": "measurement_done", "completed": 15, "total": 20, "elapsed_seconds": 378.57330344989896, "pair": 5, "pairs": 7, "variant": "reference"}
+{"phase": "measurement", "completed": 15, "total": 20, "elapsed_seconds": 378.5737957227975, "pair": 5, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement_done", "completed": 16, "total": 20, "elapsed_seconds": 398.2466327082366, "pair": 5, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 16, "total": 20, "elapsed_seconds": 398.24667656607926, "pair": 6, "pairs": 7, "variant": "reference"}
+{"phase": "measurement_done", "completed": 17, "total": 20, "elapsed_seconds": 418.21348041668534, "pair": 6, "pairs": 7, "variant": "reference"}
+{"phase": "measurement", "completed": 17, "total": 20, "elapsed_seconds": 418.2135205473751, "pair": 6, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement_done", "completed": 18, "total": 20, "elapsed_seconds": 439.04840561561286, "pair": 6, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 18, "total": 20, "elapsed_seconds": 439.0484425313771, "pair": 7, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement_done", "completed": 19, "total": 20, "elapsed_seconds": 459.09970912337303, "pair": 7, "pairs": 7, "variant": "length_grouped"}
+{"phase": "measurement", "completed": 19, "total": 20, "elapsed_seconds": 459.09975368343294, "pair": 7, "pairs": 7, "variant": "reference"}
+{"phase": "measurement_done", "completed": 20, "total": 20, "elapsed_seconds": 479.32654824107885, "pair": 7, "pairs": 7, "variant": "reference"}
+{"phase": "complete", "completed": 20, "total": 20, "elapsed_seconds": 479.35701084695756}
+{
+  "pairs": 7,
+  "median_paired_speedup": 1.0096135730299967,
+  "median_paired_time_reduction_pct": 0.9522032277304748,
+  "paired_speedup_bootstrap95": [
+    0.9583348594764717,
+    1.0558051023354318
+  ],
+  "faster_pairs": 5,
+  "verdict": "inconclusive",
+  "uncertainty": "Descriptive paired percentile bootstrap, 10000 resamples. Few repeated timings on identical documents; shared-host drift and workload generalization are not covered."
+}

@@ -1,6 +1,6 @@
 # ENINCA Document Bench
 
-[Français](README.fr.md) · [Local browser demo](docs/en/demo.md) · [Methods](docs/en/methodology.md) · [Results](docs/en/results.md) · [Pilot](docs/en/pilot.md)
+[Français](README.fr.md) · [Measured comparison](docs/en/comparison.md) · [Local browser demo](docs/en/demo.md) · [Methods](docs/en/methodology.md) · [Results](docs/en/results.md) · [Pilot](docs/en/pilot.md)
 
 A local Python library for document search, assisted classification and reproducible CPU evaluation. Developed by Pascal Montmory for **ENINCA CONSULTING**.
 
@@ -27,9 +27,15 @@ In a checkout of this repository, run:
 bash demo.sh
 ```
 
-The browser opens at **http://127.0.0.1:8765**. Search the 220 public documents, review model suggestions on the 80 held-out test documents, and export human decisions to CSV. The interface supports French and English; original documents remain French. Indexes and decisions stay in `runs/browser-demo/` on your computer. The first launch builds indexes; subsequent launches reuse them. After initial dependency/model setup, the application needs no network connection. Public source links open externally only when clicked.
+The browser opens at **http://127.0.0.1:8765**. The first tab compares indexing times with checked quality; an archived CPU run is available and a button starts a new comparison on the server host. Search the 220 public documents, review model suggestions on the 80 held-out test documents, and export human decisions to CSV. The interface supports French and English; original documents remain French. Indexes and decisions stay in `runs/browser-demo/` on the server host (your computer or VPS). The first launch builds indexes; subsequent launches reuse them. After initial dependency/model setup, the application needs no network connection. Public source links open externally only when clicked.
 
-On macOS, `demo.command` also launches it by double-clicking after setup. Keep the Terminal open; stop with **Ctrl+C**. This launcher does not rerun the benchmark campaign. See the [five-minute demonstration and operating guide](docs/en/demo.md).
+On macOS, `demo.command` also launches it by double-clicking after setup. Keep the Terminal open; stop with **Ctrl+C**. No comparison starts without pressing its launch button. See the [five-minute demonstration and operating guide](docs/en/demo.md).
+
+## View and rerun a measured comparison
+
+The new screen compares input order against length grouping with the same model and resources. It provides complete indexing times, throughput, classification errors, conditional cost estimates and downloadable raw evidence.
+
+**22 October VPS run: no confirmed speed gain.** Across 48 texts and seven pairs, median times are 20.768 s and 20.833 s; the descriptive paired-ratio interval includes 1. All 80 decisions agree, with six errors among 33 accepted suggestions. This helps decide whether to adopt an optimization; it does not yet establish an advantage over an external business tool. [Protocol, results and operation](docs/en/comparison.md).
 
 ## Start on macOS or Linux
 

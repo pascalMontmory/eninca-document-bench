@@ -94,6 +94,8 @@ class Demo:
         self.status_lock = threading.Lock()
         self.phase, self.ready, self.error = "starting", False, False
         self.started = time.perf_counter()
+        from .performance import ComparisonManager
+        self.comparison = ComparisonManager(self)
 
     def progress(self, phase):
         with self.status_lock:

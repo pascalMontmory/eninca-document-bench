@@ -1,6 +1,6 @@
 # ENINCA Document Bench
 
-[English](README.md) · [Démonstration locale](docs/fr/demo.md) · [Méthode](docs/fr/methodology.md) · [Résultats](docs/fr/results.md) · [Pilote](docs/fr/pilot.md)
+[English](README.md) · [Comparaison mesurée](docs/fr/comparison.md) · [Démonstration locale](docs/fr/demo.md) · [Méthode](docs/fr/methodology.md) · [Résultats](docs/fr/results.md) · [Pilote](docs/fr/pilot.md)
 
 Bibliothèque Python locale de recherche documentaire, de classement assisté et d'évaluation reproductible sur CPU. Développée par Pascal Montmory pour **ENINCA CONSULTING**.
 
@@ -27,9 +27,15 @@ Dans une copie de ce dépôt, lancer :
 bash demo.sh
 ```
 
-Le navigateur s’ouvre à **http://127.0.0.1:8765**. Recherchez parmi les 220 documents publics, vérifiez les propositions du modèle sur les 80 documents de test séparés, puis exportez vos décisions en CSV. L’interface est en français et en anglais ; les documents d’origine restent en français. Les index et les décisions restent dans `runs/browser-demo/`, sur votre ordinateur. Le premier lancement construit les index ; les suivants les réutilisent. Après l’installation des dépendances et du modèle, l’application fonctionne sans connexion. Les liens vers les sources publiques s’ouvrent à l’extérieur uniquement si vous cliquez dessus.
+Le navigateur s’ouvre à **http://127.0.0.1:8765**. Le premier onglet compare les temps d’indexation à qualité contrôlée ; un essai CPU archivé est consultable, et un bouton lance une nouvelle comparaison sur l’hôte du serveur. Recherchez parmi les 220 documents publics, vérifiez les propositions du modèle sur les 80 documents de test séparés, puis exportez vos décisions en CSV. L’interface est en français et en anglais ; les documents d’origine restent en français. Les index et les décisions restent dans `runs/browser-demo/`, sur l’hôte du serveur (votre ordinateur ou le VPS). Le premier lancement construit les index ; les suivants les réutilisent. Après l’installation des dépendances et du modèle, l’application fonctionne sans connexion. Les liens vers les sources publiques s’ouvrent à l’extérieur uniquement si vous cliquez dessus.
 
-Sur macOS, un double-clic sur `demo.command` permet également le lancement après installation. Gardez le Terminal ouvert ; arrêtez avec **Ctrl+C**. Ce lanceur ne relance pas la campagne de benchmark. Consulter le [scénario de démonstration de cinq minutes et le guide pratique](docs/fr/demo.md).
+Sur macOS, un double-clic sur `demo.command` permet également le lancement après installation. Gardez le Terminal ouvert ; arrêtez avec **Ctrl+C**. Aucune campagne comparative ne démarre sans action sur le bouton. Consulter le [scénario de démonstration de cinq minutes et le guide pratique](docs/fr/demo.md).
+
+## Comparaison consultable et relançable
+
+Le nouvel écran compare l’ordre d’entrée au regroupement des fenêtres par longueur, à modèle et ressources identiques. Il fournit les temps complets d’indexation, le débit, les erreurs de classement, une estimation conditionnelle de coût et les données brutes téléchargeables.
+
+**Essai VPS du 22 octobre : gain non confirmé.** Sur 48 textes et sept paires, les temps médians sont de 20,768 s et 20,833 s ; l’intervalle descriptif du ratio apparié inclut 1. Les 80 décisions restent identiques, avec six erreurs parmi 33 acceptations. L’outil sert à vérifier si une optimisation mérite d’être retenue ; il ne démontre pas encore un avantage sur un logiciel métier externe. [Protocole, résultats et utilisation](docs/fr/comparison.md).
 
 ## Démarrer sur macOS ou Linux
 

@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "documents": 220,
+  "review_documents": 80,
+  "checks": [
+    "search_and_original_text",
+    "human_review",
+    "unchanged_model_metrics",
+    "csv_export",
+    "undo",
+    "french_and_english",
+    "mobile_no_horizontal_overflow",
+    "long_query_rejected",
+    "no_external_requests"
+  ],
+  "model_metrics": {
+    "documents": 80,
+    "known_documents": 60,
+    "unknown_documents": 20,
+    "accepted": 33,
+    "correct_accepted": 27,
+    "incorrect_accepted": 6,
+    "coverage": 0.4125,
+    "known_coverage": 0.5,
+    "accepted_precision": 0.8181818181818182,
+    "accepted_precision_wilson95": [
+      0.6561176836533009,
+      0.9138923179105933
+    ],
+    "known_accuracy_counting_abstentions_as_errors": 0.45,
+    "unknown_false_accepts": 3,
+    "unknown_false_accept_rate": 0.15,
+    "unknown_false_accept_wilson95": [
+      0.052368745896216595,
+      0.36041886474075696
+    ]
+  },
+  "scope": "204912ced298a5cf796b222282c5795f5673f41ff1590bcef850b1b9e871fe34",
+  "limitation": "Functional browser check on CPU, not a retrieval-quality or performance benchmark."
+}

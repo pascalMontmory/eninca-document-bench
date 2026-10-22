@@ -17,12 +17,15 @@ index, les mêmes prédictions et une décision enregistrée. Les décisions de 
 ont été annulées. Il ne s’agit ni d’une exécution Mac, ni d’une CI hébergée, ni
 d’une évaluation de pertinence ou de performance sur accélérateur.
 
+The original source from commit `0af7ae2` is frozen in `evidence/browser-demo-v1/` because the live demo has since gained a comparison screen. / Le code initial du commit `0af7ae2` est figé dans `evidence/browser-demo-v1/` ; la démonstration courante a depuis reçu un écran comparatif.
+
 From the repository root / Depuis la racine du dépôt :
 
 ```bash
-sha256sum -c results/browser-demo-20261022/SHA256SUMS
+cd evidence/browser-demo-v1
+sha256sum -c SHA256SUMS
 # macOS:
-shasum -a 256 -c results/browser-demo-20261022/SHA256SUMS
+shasum -a 256 -c SHA256SUMS
 ```
 
 Browser screenshots and generated indexes remain in the local ignored `runs/`

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "checks": [
+    "first_view_comparison",
+    "raw_medians_displayed",
+    "conditional_cost_arithmetic",
+    "csv_and_zip_downloads",
+    "french_and_english",
+    "mobile_no_horizontal_overflow",
+    "no_external_requests"
+  ],
+  "native_start_cancel": true,
+  "measured_verdict": "inconclusive",
+  "limitation": "Functional browser check; timings remain those in the independent native campaign."
+}

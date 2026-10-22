@@ -31,7 +31,8 @@ def handler_for(app, token):
             self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; "
                              "img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'")
             if download:
-                self.send_header("Content-Disposition", 'attachment; filename="eninca-decisions.csv"')
+                name = download if isinstance(download, str) else "eninca-decisions.csv"
+                self.send_header("Content-Disposition", f'attachment; filename="{name}"')
             self.end_headers()
             try:
                 self.wfile.write(payload)
@@ -49,15 +50,23 @@ def handler_for(app, token):
             assets = {"/": ("index.html", "text/html; charset=utf-8"),
                       "/icon.svg": ("icon.svg", "image/svg+xml"),
                       "/app.js": ("app.js", "text/javascript; charset=utf-8"),
+                      "/performance.js": ("performance.js", "text/javascript; charset=utf-8"),
                       "/style.css": ("style.css", "text/css; charset=utf-8")}
             if url.path in assets:
                 filename, mime = assets[url.path]
                 return self.reply(200, (STATIC / filename).read_bytes(), mime)
             if url.path == "/api/status":
                 return self.reply(200, dict(app.status(), token=token))
+            if url.path == "/api/benchmark/status":
+                return self.reply(200, app.comparison.status())
             if not app.status()["ready"]:
                 return self.reply(503, {"error": "not_ready"})
             try:
+                if url.path == "/api/benchmark/download":
+                    body, mime, name = app.comparison.download(parse_qs(url.query).get("format", ["zip"])[0])
+                    return self.reply(200, body, mime, download=name)
+                if app.comparison.status()["running"] and url.path in {"/api/state", "/api/export.csv"}:
+                    return self.reply(409, {"error": "benchmark_busy"})
                 if url.path == "/api/state":
                     return self.reply(200, app.snapshot())
                 if url.path == "/api/document":
@@ -80,6 +89,19 @@ def handler_for(app, token):
                 data = json.loads(self.rfile.read(size))
                 if not isinstance(data, dict):
                     raise ValueError("invalid_request")
+                if self.path in {"/api/benchmark/start", "/api/benchmark/cancel"}:
+                    if data:
+                        raise ValueError("invalid_request")
+                    if self.path.endswith("start"):
+                        try:
+                            app.comparison.start()
+                        except ValueError:
+                            return self.reply(409, {"error": "benchmark_busy"})
+                    else:
+                        app.comparison.cancel()
+                    return self.reply(202, app.comparison.status())
+                if app.comparison.status()["running"]:
+                    return self.reply(409, {"error": "benchmark_busy"})
                 if self.path == "/api/search":
                     return self.reply(200, app.search(data.get("query")))
                 if self.path == "/api/review":

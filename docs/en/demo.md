@@ -30,10 +30,11 @@ Preparation encodes 60 training, 80 validation and 80 test documents. The interf
 
 Prepare the index before the meeting. To start without human decisions, use fresh state: `bash demo.sh --state-dir runs/demo-presentation`. This new state needs its own initial indexing.
 
-1. **Search, one minute.** Click “Rental housing” or ask a short question. Open a result: excerpt, full text and source are available. This searches existing text; it does not generate an answer. The score is similarity, not a probability.
-2. **Classification, two minutes.** Open “Classify and review”, then “Abstentions awaiting review”. Read a document, choose a topic or “Outside the four topics”, and save. Also show that an automatically accepted suggestion can be corrected. An automatic suggestion is never presented as human approval.
-3. **Summary, one minute.** Show decisions, documents awaiting review and corrected suggestions. Initial model results stay separate: human review does not artificially improve them.
-4. **Export, one minute.** Download the CSV: original suggestion, human decision, date and configuration identifier. All 80 rows are exported, including those without a decision. In “Saved decisions”, a decision can be changed or returned to review.
+1. **Comparison, one minute.** The first tab displays the archived run, measured machine and verdict. Show both times, preserved errors and evidence download. Start a new measurement before the meeting: other functions pause during the run. [Read the comparison protocol](comparison.md).
+2. **Search, one minute.** Click “Rental housing” or ask a short question. Open a result: excerpt, full text and source are available. This searches existing text; it does not generate an answer. The score is similarity, not a probability.
+3. **Classification, one minute.** Open “Classify and review”, then “Abstentions awaiting review”. Read a document, choose a topic or “Outside the four topics”, and save. Also show that an automatically accepted suggestion can be corrected. An automatic suggestion is never presented as human approval.
+4. **Summary, one minute.** Show decisions, documents awaiting review and corrected suggestions. Initial model results stay separate: human review does not artificially improve them.
+5. **Export, one minute.** Download the CSV: original suggestion, human decision, date and configuration identifier. All 80 rows are exported, including those without a decision. In “Saved decisions”, a decision can be changed or returned to review.
 
 The interface can switch languages; DILA documents remain French. Examples are not a retrieval-quality test: relevance needs independent evaluation questions before any commercial promise.
 
@@ -45,6 +46,8 @@ The interface can switch languages; DILA documents remain French. Examples are n
 - **Corrected suggestions**: human decision different from the top suggested topic, including out of scope. This overlaps the out-of-scope count; the four cards are not additive.
 - **Automatic precision**: automatically accepted suggestions that are correct according to public reference labels, divided by all accepted suggestions. It is neither coverage nor human decision accuracy. The interval and out-of-scope false accepts are displayed.
 - **Times**: session preparation, original encoding retained in the cache, and this session’s searches. Loading a cache is not a newly timed encoding.
+
+The first tab times both indexing configurations separately; preparation and search times in “Summary” have a different scope.
 
 Configuration uses batch size four, length sorting and two CPU threads. This choice from the small Mac experiment is not a guaranteed optimum. Historical benchmarks remain in [results](results.md); the demonstration computes its own results with the local model.
 

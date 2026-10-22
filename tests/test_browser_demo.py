@@ -134,6 +134,13 @@ class BrowserHTTP(unittest.TestCase):
                 self.assertEqual(request("/api/review", "POST", "[]", valid)[0], 400)
                 self.assertEqual(request("/api/search", "POST", '{"query": null}', valid)[0], 400)
                 self.assertEqual(request("/api/export.csv")[0], 200)
+                app.comparison.running = True
+                self.assertEqual(request("/api/state")[0], 409)
+                self.assertEqual(request("/api/search", "POST", '{"query":"test"}', valid)[0], 409)
+                self.assertEqual(request("/api/benchmark/status")[0], 200)
+                self.assertEqual(request("/api/benchmark/start", "POST", "{}", valid)[0], 409)
+                self.assertEqual(request("/api/benchmark/cancel", "POST", "{}", valid)[0], 202)
+                self.assertTrue(app.comparison.cancel_event.is_set())
             finally:
                 server.shutdown()
                 server.server_close()

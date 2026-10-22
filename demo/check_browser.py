@@ -37,6 +37,7 @@ def main():
         page.locator("#application").wait_for(state="visible", timeout=300_000)
         before = context.request.get(args.url + "/api/state").json()
         assert before["documents"] == 220 and len(before["rows"]) == 80
+        page.locator('[data-view="search"]').click()
         page.locator('[data-t="example1"]').click()
         expect(page.locator(".result")).to_have_count(5)
         expect(page.locator("#search-submit")).to_be_enabled()

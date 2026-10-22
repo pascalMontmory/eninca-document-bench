@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-22T12:40:18.136262+00:00",
+  "input_kind": "public_dila",
+  "input_sha256": "2d9dc7c77fa2f17f3c26af091ac00f4a6f0680015e75d67da8c1a379c5b95474",
+  "timing_document_ids": [
+    "F2692",
+    "F317",
+    "F34905",
+    "F32920",
+    "F21887",
+    "F2247",
+    "F34769",
+    "F19066",
+    "F23420",
+    "F34757",
+    "F2234",
+    "F34344",
+    "F24585",
+    "F34781",
+    "F37294",
+    "F1100",
+    "F14745",
+    "F32795",
+    "F33890",
+    "F2064",
+    "F31679",
+    "F14946",
+    "F34029",
+    "F31187",
+    "F34210",
+    "F34825",
+    "F21131",
+    "F22395",
+    "F986",
+    "F1653",
+    "F33999",
+    "F76",
+    "F34996",
+    "F39676",
+    "F2842",
+    "F20744",
+    "F748",
+    "F34342",
+    "F31858",
+    "F33779",
+    "F17608",
+    "F13607",
+    "F12814",
+    "F34826",
+    "F1930",
+    "F38243",
+    "F803",
+    "F15341"
+  ],
+  "selected_texts_sha256": "cbcee9d9040d7a2fef9320ff8da1ab15772b255c461b92353747fd3c65710ec1",
+  "configurations": {
+    "reference": {
+      "batch_size": 4,
+      "sort_by_length": false,
+      "threads": 2
+    },
+    "length_grouped": {
+      "batch_size": 4,
+      "sort_by_length": true,
+      "threads": 2
+    }
+  },
+  "pair_orders": [
+    [
+      "reference",
+      "length_grouped"
+    ],
+    [
+      "length_grouped",
+      "reference"
+    ],
+    [
+      "length_grouped",
+      "reference"
+    ],
+    [
+      "reference",
+      "length_grouped"
+    ],
+    [
+      "reference",
+      "length_grouped"
+    ],
+    [
+      "reference",
+      "length_grouped"
+    ],
+    [
+      "length_grouped",
+      "reference"
+    ]
+  ],
+  "atol": 3e-05,
+  "rtol": 3e-05,
+  "source_sha256": {
+    "benchmarks/comparison.py": "7662def06518d87c6810738ad09142c58254c25ec8589ebe0afc2728f9be6965",
+    "src/eninca_documents/__init__.py": "ea1965b6ea92a3e30d1b55a0c136da8f5e285fae635aca20ecc65405cc73199a",
+    "src/eninca_documents/calibration.py": "ceed29b60ed3b440b69deb2ca1f3d55a193660067110541dd6d2d787717dcfec",
+    "src/eninca_documents/cli.py": "2248d27eed9621b825b08a48178720b596d28b047677cd6d7da54f20d78874d2",
+    "src/eninca_documents/core.py": "54f0d15d7ac49c3a8cf2e84c02f54c5b80fcd95e6e098d487f20848a92654527",
+    "src/eninca_documents/encoder.py": "3e73b6bde54fed4af4b0cb089a38595c7e6a1f3296be88b0799a8800fa7d1da8",
+    "src/eninca_documents/model.py": "a795bed081c3fdb936ad725022bc15669f53e8941d748a309b055679e7c429ad",
+    "src/eninca_documents/model.lock.json": "e7badb3e4a852b6204314f82cce8bf3bae732170d64235aa1aa54296c0412d30"
+  }
+}

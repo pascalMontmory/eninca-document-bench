@@ -1,5 +1,7 @@
 # Measured results and limitations
 
+The [complete-indexing comparison](comparison.md) adds two paired VPS campaigns, including one started through the browser. Both report no confirmed speed gain; all 80 classification decisions remain identical.
+
 [Français](../fr/results.md) · [Methods](methodology.md) · [Home](../../README.md)
 
 ## Public French corpus — 22 October 2026

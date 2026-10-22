@@ -1,5 +1,7 @@
 # Résultats mesurés et limites
 
+La [comparaison d’indexation complète](comparison.md) ajoute deux campagnes appariées sur VPS, dont une lancée depuis le navigateur. Les deux concluent à un gain de vitesse non confirmé ; les 80 décisions de classement restent identiques.
+
 [English](../en/results.md) · [Méthode](methodology.md) · [Accueil](../../README.fr.md)
 
 ## Corpus public français — 22 octobre 2026
