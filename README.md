@@ -4,6 +4,8 @@
 
 A local Python library for document search, assisted classification and reproducible CPU evaluation. Developed by Pascal Montmory for **ENINCA CONSULTING**.
 
+**© 2026 ENINCA CONSULTING — All rights reserved. The original integration code and project-specific documentation are the property of ENINCA CONSULTING.** Public access does not grant a general license to use these contributions. Third-party models, software and public data retain their own rights. See [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
+
 The practical objective is to establish document quality, human-review workload and processing cost before investing in accelerator-specific development. This is a working CPU prototype and evaluation kit, not a deployed document-management system.
 
 ## What works today

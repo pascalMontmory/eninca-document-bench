@@ -4,6 +4,8 @@
 
 Bibliothèque Python locale de recherche documentaire, de classement assisté et d'évaluation reproductible sur CPU. Développée par Pascal Montmory pour **ENINCA CONSULTING**.
 
+**© 2026 ENINCA CONSULTING — Tous droits réservés. Le code d'intégration original et la documentation propre au projet sont la propriété d'ENINCA CONSULTING.** L'accès public ne vaut pas licence générale d'utilisation de ces contributions. Les modèles, logiciels et données publiques tiers conservent leurs propres droits. Voir [LICENSE](LICENSE) et les [notices tierces](THIRD_PARTY_NOTICES.md).
+
 L'objectif est de mesurer la qualité documentaire, la charge de revue humaine et le coût du traitement avant d'investir dans une accélération matérielle. C'est un prototype CPU fonctionnel et un kit d'évaluation ; ce n'est pas un système de gestion documentaire déployé.
 
 ## Ce qui fonctionne
